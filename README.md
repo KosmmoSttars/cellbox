@@ -2,6 +2,8 @@
 
 Cellular automata in a Windows 95 box. Pick a rule, seed the field, and watch it live.
 
+![Cellbox window](docs/screenshot.png)
+
 - **Rules**: Life-like rules in B/S notation (`B3/S23` is Conway's Life) and Generations rules with
   fading dying cells (`B2/S/C3` is Brian's Brain). Twelve presets in the Rules menu, or type your own
   under Rules → Custom.
