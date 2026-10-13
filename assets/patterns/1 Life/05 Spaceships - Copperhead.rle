@@ -1,0 +1,4 @@
+#N Copperhead
+#C A c/10 orthogonal spaceship found by 'zdr' in 2016.
+x = 8, y = 12, rule = B3/S23
+b2o2b2ob$3b2o3b$3b2o3b$obo2bobo$o6bo2$o6bo$b2o2b2ob$2b4o2b2$3b2o3b$3b2o!

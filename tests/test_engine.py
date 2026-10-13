@@ -62,7 +62,7 @@ def test_switching_to_life_like_drops_dying_cells():
     assert field.state.max() == 0
 
 
-@pytest.mark.parametrize("preset", PRESETS, ids=lambda p: p.name)
+@pytest.mark.parametrize("preset", [p for p in PRESETS if p.rule.family == "life"], ids=lambda p: p.name)
 def test_kernel_matches_numpy_reference(preset):
     field = Field(64, preset.rule)
     field.seed(0.35, spot=False, seed=7)

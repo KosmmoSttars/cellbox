@@ -2,10 +2,11 @@
 
 Life-like rules color a live cell by its age: newborn white, then yellow, lime, cyan and finally blue
 for long-lived cells. Generations rules color by state: live cells white, dying cells fading from dark
-red through purple to navy.
+red through purple to navy. Wireworld uses the classic colors: blue heads, red tails, yellow wire.
+Lenia is continuous, so it gets the one 256-color table: a smooth ramp through VGA colors.
 """
 
-from cellbox.rules import Rule
+from cellbox.rules import AnyRule, LeniaRule, Wireworld
 
 VGA = {
     "black": 0x000000, "navy": 0x000080, "green": 0x008000, "teal": 0x008080,
@@ -44,5 +45,40 @@ def state_table(states: int) -> list[int]:
     return table
 
 
-def color_table(rule: Rule) -> list[int]:
+# Wireworld by state: empty, head, tail, wire
+WIRE_COLORS = ("black", "blue", "red", "yellow")
+
+# Lenia: (value, color) stops, linearly blended in between
+LENIA_RAMP = ((0.0, 0x000000), (0.18, 0x000080), (0.38, 0x0060C0), (0.58, 0x00C0A0), (0.76, 0x80FF40),
+              (0.92, 0xFFFF00), (1.0, 0xFFFFFF))
+
+
+def wire_table() -> list[int]:
+    table = [_argb(BACKGROUND)] * 256
+    for state, color in enumerate(WIRE_COLORS):
+        table[state] = _argb(VGA[color])
+    return table
+
+
+def _blend(a: int, b: int, t: float) -> int:
+    channels = [round(((a >> s) & 255) * (1 - t) + ((b >> s) & 255) * t) for s in (16, 8, 0)]
+    return (channels[0] << 16) | (channels[1] << 8) | channels[2]
+
+
+def lenia_table() -> list[int]:
+    table = []
+    for i in range(256):
+        v = i / 255
+        for (v0, c0), (v1, c1) in zip(LENIA_RAMP, LENIA_RAMP[1:]):
+            if v <= v1:
+                table.append(_argb(_blend(c0, c1, (v - v0) / (v1 - v0))))
+                break
+    return table
+
+
+def color_table(rule: AnyRule) -> list[int]:
+    if isinstance(rule, LeniaRule):
+        return lenia_table()
+    if isinstance(rule, Wireworld):
+        return wire_table()
     return state_table(rule.states) if rule.is_generations else age_table()

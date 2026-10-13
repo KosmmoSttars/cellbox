@@ -1,0 +1,5 @@
+#N OR gate
+#C Clocks of period 12 and 18 into an OR gate: a pulse comes out when either input sends one, and one pulse when both arrive together.
+x = 65, y = 20, rule = WireWorld
+CBA22C$C3.C19.C$C3.C19.C$C3.C19.C$5C19.C$24.C$24.C$24.7C$31.C.2C$30.3C
+2.30C$31.C.2C$24.7C$24.C$24.C$3CBA20C$C5.C$C5.C$C5.C$C5.C$7C!

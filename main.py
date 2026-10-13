@@ -1,6 +1,7 @@
 """Cellbox entry point.
 
     python main.py               open the window
+    python main.py pattern.rle   open the window with a pattern (also: drop a file on Cellbox.exe)
     python main.py --self-check  write cellbox_check.txt next to the app and exit (used by tools/build.py)
 """
 
@@ -32,6 +33,24 @@ def self_check() -> int:
         field.step(64)
         glider_ok = (field.state == start).all() and field.population == 5
         lines.append(f"glider     {'back home after 64 steps' if glider_ok else 'WRONG'}")
+        from cellbox.patterns import library, species
+        groups = library()
+        lines.append(f"library    {sum(len(g) for g in groups.values())} patterns in {len(groups)} groups")
+        orbium = species("O2u")
+        lenia = Field(128, orbium.rule)
+        lenia.stamp(orbium.cells, 54, 54)
+        mass = lenia.population
+        t = time.perf_counter()
+        lenia.step(100)
+        lenia_ok = abs(lenia.population - mass) < 0.1 * mass
+        lines.append(f"lenia      Orbium {'alive' if lenia_ok else 'DIED'} after 100 steps "
+                     f"({100 / (time.perf_counter() - t):.0f} steps/s at 128 x 128)")
+        wire = groups["Wireworld"][0]
+        circuit = Field(128, wire.rule)
+        circuit.stamp(wire.cells, 4, 4)
+        circuit.step(50)
+        wire_ok = circuit.population > 0
+        lines.append(f"wireworld  {'clocks ticking' if wire_ok else 'NO ELECTRONS'}")
         big = Field(1024)
         big.seed(0.3, spot=False, seed=1)
         t = time.perf_counter()
@@ -42,7 +61,7 @@ def self_check() -> int:
         from cellbox.sound import SOUND_FILES, assets_dir
         missing = [f for f in SOUND_FILES.values() if not (assets_dir() / "sounds" / f).exists()]
         lines.append(f"sounds     {'all present' if not missing else 'missing ' + ', '.join(missing)}")
-        ok = bool(glider_ok) and bool(cache) and not missing
+        ok = bool(glider_ok) and lenia_ok and wire_ok and bool(cache) and not missing
     except Exception as e:  # report anything; the build must see it
         ok = False
         lines.append(f"error      {e!r}")
@@ -78,6 +97,9 @@ def main() -> int:
         windows.append(window)
         window.show()
         splash.close()
+        files = [a for a in sys.argv[1:] if not a.startswith("-")]
+        if files:
+            window.open_path(Path(files[0]))
 
     def fail(message: str) -> None:
         splash.close()

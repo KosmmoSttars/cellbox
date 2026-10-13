@@ -1,0 +1,4 @@
+#N Heavyweight spaceship
+#C HWSS, c/2.
+x = 7, y = 5, rule = B3/S23
+3b2o2b$bo4bo$o6b$o5bo$6o!

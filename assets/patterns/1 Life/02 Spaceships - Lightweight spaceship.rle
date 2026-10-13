@@ -1,0 +1,4 @@
+#N Lightweight spaceship
+#C LWSS: travels orthogonally at c/2. Found by John Conway, 1970.
+x = 5, y = 4, rule = B3/S23
+bo2bo$o4b$o3bo$4o!

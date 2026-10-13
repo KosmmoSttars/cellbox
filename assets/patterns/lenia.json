@@ -1,0 +1,205 @@
+{
+ "credit": "Lenia creatures from Bert Chan's catalogue, https://github.com/Chakazul/Lenia (MIT license, (c) 2018 Bert Chan).",
+ "species": [
+  {
+   "section": "Orbium",
+   "code": "O2u",
+   "name": "Orbium",
+   "latin": "Orbium unicaudatus",
+   "rule": "Lenia R=13 T=10 m=0.15 s=0.015 b=1",
+   "cells": "7.MD6.qL$6.pKqEqFURpApBRAqQ$5.VqTrSsBrOpXpWpTpWpUpCrQ$4.CQrQsTsWsApITNPpGqGvL$3.IpIpWrOsGsBqXpJ4.LsFrL$A.DpKpSpJpDqOqUqSqE5.ExD$qL.pBpTT2.qCrGrVrWqM5.sTpP$.pGpWpD3.qUsMtItQtJ6.tL$.uFqGH3.pXtOuR2vFsK5.sM$.tUqL4.GuNwAwVxBwNpC4.qXpA$2.uH5.vBxGyEyMyHtW4.qIpL$2.wV5.tIyG3yOxQqW2.FqHpJ$2.tUS4.rM2yOyJyOyHtVpPMpFqNV$2.HsR4.pUxAyOxLxDxEuVrMqBqGqKJ$3.sLpE3.pEuNxHwRwGvUuLsHrCqTpR$3.TrMS2.pFsLvDvPvEuPtNsGrGqIP$4.pRqRpNpFpTrNtGtVtStGsMrNqNpF$5.pMqKqLqRrIsCsLsIrTrFqJpHE$6.RpSqJqPqVqWqRqKpRXE$8.OpBpIpJpFTK!"
+  },
+  {
+   "section": "Orbium",
+   "code": "O2b",
+   "name": "Orbium, two tails",
+   "latin": "Orbium bicaudatus",
+   "rule": "Lenia R=13 T=10 m=0.15 s=0.014 b=1",
+   "cells": "13.pK$14.qV$6.VpA.MpEpKpITqV$4.BpPpNrIrEqDpWpOpLpUqNvT$4.IqRrNsPsKqHJ3.GqOuC$4.TrLsTrPrLpS6.uUD$3.SpWqNrBqLpRqPqE6.vA$2.FpTpMLpHqPqHrVsPrS5.qUqA$K.pCpRG.ErFsRsVuSuPqN4.CrR$pA.pTU3.rWuBuRvXwTwKpF4.rCH$.tPqHH3.qFvAwUwVyJyKwNL2.DqLR$.pGsGA4.vPxSyDxE2yOuHS.XqJT$2.xIE4.sCyHyOvLvRyFxCsGpVpXqGP$2.VsU4.DxQyOvVuSwDwQuBrMqSqCF$3.vG5.tEyKwVvIvKvMtVrXqTpM$4.sU4.qFvDwMvNuUuDsUrKqDO$4.qCrDJ2.pPsKuGuHtOsQrNqKpC$5.pTqTpVpNqFrJsGsKrVrDqFpFD$6.QqCqJqPqVqXqRqHpOTC$8.LWpFpEXPG!"
+  },
+  {
+   "section": "Orbium",
+   "code": "OG2g",
+   "name": "Gyrorbium (circles)",
+   "latin": "Gyrorbium gyrans",
+   "rule": "Lenia R=13 T=10 m=0.156 s=0.0224 b=1",
+   "cells": "10.EL2QLE$7.TpU2qHqCpXpUpNpFL$4.JrVtTuKuPuKtLrXqTqHqCpPpDG$3.qWtDqRpKqEsMuXvBtGrApXpUpSpIO$2.rQrN4.pAuAvRtTrIpUpIpKpFO$.pSsM6.tJwFuNsPsFrVpPpDL$.uFB6.tJ2yO2yLyOyDsKL$pDuC6.pFxW3yOwIwD2xPqH$rNtV5.EsMxCyIyOwXtJsMtJwFuX$sHuSV3.EpDvOwFxEwQsRqR2qHsFvWE$rQvJsWpPQpKpSqCvEvBuCpD3.BpDtGrQ$pXuKvMuPtLsWsCrIuCtBrS6.qWrQ$EsKvEwXyBwLtVrVsCrDqH6.pXrG$.qHtVxJyOwQrQpNqJpPV6.qJqE$.JsUxMyOrX10.pFqRJ$2.rQxPwIpI9.pKqJT$2.qJxEuPpKB7.qCpP$2.EvOvMpPO5.TrGqH$3.sCyOqEpIOEBOqHqEsRtG$4.xMsMqJqCpXqJqRpIqOuCtBsF$5.xPrAqTqMpSE.rSsMrLqRqHV.TpS$6.vErDE2.VpPB$7.pIrNqHpKQ!"
+  },
+  {
+   "section": "Orbium",
+   "code": "OV2u",
+   "name": "Vagorbium (wavy)",
+   "latin": "Vagorbium undulatus",
+   "rule": "Lenia R=20 T=10 m=0.2 s=0.031 b=1",
+   "cells": "17.DWqD2qUqES$7.D2FDCBCHqGsTvBwQxL2xSxOwWvJsSpC$5.DJOQPNMPqWtQwHyAyHxLwAuSuGuTwBxLxXwNtAO$4.FQpB2pGpEpDqLsSvJxOyOxXvGrRR3.NrNvDxQxPuXqP$3.ESpJpSpXpWqCrMtOvRxWyOxWuOpV6.CpHtWxCxPvIrM$3.PpMqEqNqQqXsBtQvKxJ2yOvWqW8.GpXuNxFxBuWrJ$2.HpIqIrArIrPsJtLuQwGxWyOyHuHL9.XsPwExEwEtWqU$2.UqCrDrSsCsQtItXuWwIyDyOyDtK10.PsIvTwXwKuSsPqC$.GpMqUrTsJsUtItOtWuOwFyHyOyJtF10.LtIwMxAwDuUtFrHpJ$.PqErMsJsWtKtOtKtNuIwAyN2yOtVpF9.pRvKxRxCvPuFsUrOqIpCJ$.pBqRrXsStHtOtL2tEuDwE3yOvIrHpKK7.sKxWyOwUuStDrWrDqLpTpGR$DpLrCsHtAtJtMtGsXtDuHwR2yOyHwAsSqUpPO3.DqGpKvH2yOwCtMrSqQqEqApXpUpMJ$GpQrHsJsXtHtItBtAtMvByC2yOyAvHsNrFqBU3.qVrStD2yOyNvEsGqLpKpApFpQqCqApA$HpSrGsGsSsXtBsXtHuHwJ3yOxOuGrRqQpXQ2.qLqWsCwC2yOyIwTuVqXJ.JpEqAqFpI$HpPrArVsHsKsRtCtXvN4yOxCsGqJpTpOP.pRqAqPsAwW2yOyCwIvDuKqI2.PpUqDpJ$FpIqLrFrNrSsHtHuVxX4yOtGpQXSQRUpBpJpUrJxQ2yOxTwDvBuQtAW.HpMpUpC$CVpTqJqPqUrStNwA4yOuA6.BEISqExH2yOxPwDvEuUuBqW.BpCpHM$.KpApJpNpRrAtPyI3yOuHS10.WvQyOyNxNwHvLuTtQrO2.MN$.CJ2NMqAtQ3yOuVrMR11.pIsDvGvOvBuOuCtGrJ$2.A2CANtR2yOxQsQrHX10.CpPrJrWrXtE2tSsXqV$7.uIyLyOtLsKrIpJ10.LpUqWrErBrLsUtKsSqG$7.uCyAyMsUsIrMqCK9.TqAqP2qOqVrVsUsJpM$7.sNxExLsMsErTqSpHE7.KpJqEqJqGqEqNrHsBrMN$7.qBvUvJ3rVrJqKpEH5.IpApTqFqDpXpWqEqSrCqH$8.uBtJqPrBrNrQrHqMpNRKIKRpHpTqEqCpTpOpNpUqEqCR$8.rUrLOpNqHrCrMrLrAqKpWpRpSpWqGqEqCpRpLpHpG2pJS$8.pApW2.FpFqEqWrHrGrDqVqRqMqFpXpNpFXUSRI$9.P5.HpEpQ2qCpVpNpEVPJDC$19.B$17.CUS$16.OpOpSpXqD$17.GJLPS!"
+  },
+  {
+   "section": "Orbium",
+   "code": "O4s",
+   "name": "Synorbium (twin)",
+   "latin": "Synorbium solidus",
+   "rule": "Lenia R=13 T=10 m=0.122 s=0.0106 b=1",
+   "cells": "23.OTVM.qF$18.qHK.pCpDpLpIpApJpRXqN$18.qHsGpKqGqMX4.pLsO$18.OtUsLqLqHA5.RwN$19.uEvVrJRO6.LrS$17.KpHrFwGsV.pBpS6.uC$13.AIVpDpIpPpMsXuLqIqCsHqQ6.rU$12.GpBpKpAUNE2.tCuArUtOuApO5.rI$6.pV4.GpBpAE6.rWvGtUtDwBvOG4.pQpG$6.sDrJ2.IpEpA9.vRwOtWvBxVvF4.pEpR$4.AGrFuEsKWpKpH10.uJyHvEtKwSyOtK3.pFpQ$4.DqDqOuLvPpWpMI10.GyOwUsFtFxKxErPWVpTpI$3.QpIqQqAsDwDtSN12.vNyOtWsTuVwNtXqWqBqFR$2.VpKpAUWpAsEtWG12.pNxLwGuCuFuWtVrTqTpUC$.CpKN2.TEpJuCsV13.tIvVuWtXtLsPrNqLV$.OpC3.pDrCpXsPvCsL12.qLtOtTtAsErLqNpIC$VUT4.rVsHsJwEwOX11.pQrOsCrPqVqFpGH$pLpBQ4.sGuRtNvFyOyD10.TpXqOqRqGpMTE$.uCU4.PvHwFuTwDyOvE7.BpApMpRpLpBOF$.qDpQ5.uPyKuSsPwByJrH5.RpIpANA$2.wF5.qUyOwAsGtKwMuXpQ2.LpEpAC$2.qQA5.xFxOtLtCuUvCsEqEpSpRW$3.uE5.tBxBvBtOtUtVsLrCqFV$3.MrG4.qMuRuVtStBsMrNqLpD$4.pXqKE.CpXsLtJsPrTrBqFpDB$5.pHqKpWpSqLrHrOrDqKpPTB$6.DpKpVqFqGqApMXJ$9.EHGC!"
+  },
+  {
+   "section": "Scutium",
+   "code": "S1s",
+   "name": "Scutium",
+   "latin": "Scutium solidus",
+   "rule": "Lenia R=13 T=10 m=0.29 s=0.045 b=1",
+   "cells": "5.pGQ$6.sUsDqRR$4.VpXrJwKvNtXrW$2.ApVrGrWsIwKyOyDwTuNO$2.qArOrIqIpPpTxH2yOyIvKqG$rVpIrNrJpH4.xP3yOvFqWA$sKvNsKqE5.pI4yOuHqPC$sNxBuMpD5.JuN3yOwXsUpN$sGxFyOT5.pCtIyF3yOuKqUH$rPwXyOxT5.qKtSxS3yOvIrQT$pQwK2yOtWXJXqHsGuWxW3yOvPsApC$.vQ3yOuVsLsGsXuMwOyK3yOvHrVpC$.rKyK3yOxEwBwCwXyE3yOxQuMrJU$.WvC5yOyM5yOwFtJqOL$2.rVwO9yOwWuMsApOC$2.pLtBwK6yOyJwQuTsQqLP$3.qHsWvEwUxTyCxRwWvRuGsNqSpA$3.HqBrUtHuGuPuLtVsXrSqIXB$4.DpDqEqW2rIqWqGpJN$6.ENTUPHA!"
+  },
+  {
+   "section": "Scutium",
+   "code": "S2s",
+   "name": "Discutium",
+   "latin": "Discutium solidus",
+   "rule": "Lenia R=13 T=10 m=0.356 s=0.063 b=1",
+   "cells": "8.AEG2JHFB$6.HUpKpWqGqKqLqHpXpOpCOE$4.FpCqGrGsCsQtBtEtDsUsMrXrIqNpRVF$3.MqArPtDuHvDvPvUvVvSvMvAuMtTsWrWqUpRQA$2.MqMsSuSwIxKyDyKyMyKyFxUxKwUwCvGuGtCrTqKpBD$.DqKtHvWyC10yOyHxLwLvHtXsMqUpHE$.pMsWwG14yOyMxJwBuOsVrBpHD$.rLvM6yOyLyDyByGyL6yOyAwOuVsXqVX$VtMxS5yOyGwR2vXwJxCxTyI5yOyLwTuUsOqHM$qGvDyM5yOvWtRtDtHtWuTvSwRxNyEyN4yOwRuJrUpKB$rKwFxXyK3yOxRsJqNqIqSrMsJtIuIvHwIxJyH3yOyMwDtJqOL$sCwLwWxU3yOuRT2.GpBqAqXrXsXuBvIwWyH3yOxTuVrSpB$sHuSvLxAyK2yOrO6.OpOqPrTtFvDxJ4yOwGsUpRA$rXsStVvVxW2yOpO8.IpOrEtJwM4yOxLtSqGC$qBqQsFuPxByLxWqWV9.pFrWwD4yOyJuIqOD$.NqOtGvTxPuLsDqUpKJ8.rDxD5yOuOqOB$2.WrRuFwDrP2rTrHqLpJL6.sK6yOuIqE$3.qBsIrPpKqAqOrBrIrFqOpTXJCBKxI5yOxXtMpI$3.HqJ3.HpBpVqQrGrKrEqQqHqGuE4yOyMyNwNsBB$11.NpNqLrFrTsDsO2yOyNyE2xSyCuLqA$13.GpLqNrPuKyDxUxDwJwCwLvUrV$15.NpTwDwCvMuPtXuCvAsVS$16.GtNtIsPrTrLsDsTpL$16.pEqSqIpNVpBqFpH$16.A5.G!"
+  },
+  {
+   "section": "Scutium",
+   "code": "S3s",
+   "name": "Triscutium",
+   "latin": "Triscutium solidus",
+   "rule": "Lenia R=13 T=10 m=0.4 s=0.0797 b=1",
+   "cells": "11.DIMPRQOLGC$8.EQpHpVqJqSqXrBrAqTqMqDpPpEQG$6.EXqArCsAsStItRtWtXtUtOtFsRsErLqRpXpFNC$5.NpWrMsXuGvHwAwNwUwWwUwPwHvUvJuRuBtGsJrKqKpLPC$4.UqSsVuUwLxS8yOyGxQxCwJvPuStTsSrPqLpIL$3.SrFtWwJyL13yOyJxRwWwBvBtWsRrKqDWE$2.ErAuIxL18yOxXxCwCuWtQsHqTpKI$2.pWtVxR21yOxWwWvSuLsXrJpTN$2.sIwU6yOyMxXxOxMxRxXyFyKyMyN8yOxNwKvAtMrRqBP$.pQuT6yOyJwOvKvAvDvMwCwPxBxJxOxSyAyGyL5yOyDwVvLtSrWqBO$.rPwWyK5yOvUtEsEsBsIsWtQuJuXvIvOvWwHwUxLyCyM4yOyMxGvQtUrVpVJ$.tHxGxUyL3yOxQrXpNpApDpOqIrEsAsOsWtEtMuBuSvQwSxRyK5yOxLvRtRrMpLE$SuMwAwWyB3yOuIE5.VpUqJqOqRrArOsKtOuXwIxOyK5yOxLvNtHqXX$pTtPuLvSxJyN2yOrH7.RpCWPRpGqFrLtBuRwIxQyL5yOxGvBsNqDJ$qKrRsTuMwNyEyOyJqJQA3.FVpWpSU3.GpNrFtBuVwNxTyM5yOwQuDrLpE$QpPrCtFvNxMyMvJsCqPpRpIpNqEqXsLsVsCqNpHJ2.DpRrNtJvDwQxUyM4yOyHvQsVqEH$2.pLrVuIwKxVtNtDsP2sEsOtDtXuRuLtOsLrOqKpFI.VqHrWtMvCwNxSyM4yOxEuFrGV$3.qLsVuXtBsJsQsUtAtDtFtBtQtOtCsOsPsSsJrMqGpJpGpOqLrRtEuRwIxT5yOvMsIpNA$3.VrFtDpOqIqVrHrLrJ2qXrBqPqEqAqVrUsNsSsHrTqRpNpDpTrDsRuLwJyB4yOwRtHqFF$4.pJ3.K2RJ.E4.OpSrAsDtDtSsOpX2.pAqQsNuSxD4yOxUuEqTK$20.UqIsOuJtWqM3.QqRtFwCyJ4yOuWrHO$21.NrItUuHrHJ3.pArTvIyI4yOvLrOQ$22.pWsQtRsJpH4.qUvI5yOvRrOP$22.MrDtAtDqQI3.rAwV5yOvOrJK$23.pHsDtHsBpUJ2.tV6yOvBqTC$24.qVsTsXrTqJpOsJ7yOuBpU$24.pLrRsVtB2sP7yOxGsLN$25.qDrUsXtNxP3yOyNyLyMyOvBqJ$25.IqFrStRyByCxWxQxKxMxVwVsF$26.IpXvMwEwDvVvPvQwEwVtLU$27.XtJtQtO2tHtSuRtVpN$27.qEqRqUqRqOqXrWtDpQ$32.SqBpC!"
+  },
+  {
+   "section": "Scutium",
+   "code": "2S1v",
+   "name": "Serrated scutium",
+   "latin": "Scutium serratus vagus",
+   "rule": "Lenia R=10 T=10 m=0.27 s=0.044 b=1/2;1",
+   "cells": "9.ANWSIA$9.MpRqSrAqKpJMB$6.DFOpPrItBtOtBrUqIpBH$5.pEpVqPrStKvI2wQvQuEsJqRpIL$4.PrSuKwSyI4yOxWwLuHsFqPpGF$4.qNxD9yOwWuDsDqMU$4.tM5yOyNxXxTyN2yOwVuFsFqCH$3.JwU3yOwLwDwBvKvIxJ3yOwJuBrQpG$3.uKwX2yOuDrOsBsHsIsGuFxEyKyOxQvLsXqIF$2.tDuXxIyOvW2.L.HqIsQvLxNyOyLwHtNrAR$FrLtNvOyDxS6.pMtDwHyH2yOwBtAqUU$UrJtRwFyOW6.pWtJxE2yOyLuDrFpUM$AqUtMvXrSG6.pKsTxC2yOwVrRpHMA$.qD.qBrFS6.SsLxG2yOvMqHH$3.VqRqFO5.qNwK3yOuEpQA$4.pOqKqBL3.sU5yOsPpOA$4.OpNqNqJ2pEtByOyNyM2yOvKrBpH$5.IpMqXrXxJyFxFwNwLuNsHqHTG$7.LsRvSvNvBuKI$8.sIsXtJtDU$7.NpLqPrHqA$10.D!"
+  },
+  {
+   "section": "Pteron",
+   "code": "PG1a",
+   "name": "Gyropteron",
+   "latin": "Gyropteron arcus",
+   "rule": "Lenia R=13 T=10 m=0.283 s=0.0481 b=1",
+   "cells": "8.O2pATKA$7.pLqSrMrSrPrCqHpGH$6.pIrOtHuKvAvCuRtUsOqTpB$5.qXtSvWxNyFyL2yOxSwKuLsApMA$3.rJuFvUxBxXyM6yOxSvJsIpJ$2.qOtKvOxGyH9yOxQvErRU$.pCsJvDxGyL2yOwVvBuTvBvNwJxHyCyDwVtXqKE$.qXuEwTxBuBqR2.OpRqUrArPtDvHxBxIvLrXW$pDsRqDrMrIpH4.JpNqLqJqWsUvPxDwGtEpRA$pQ.qHrKqGD5.XqDqRqTsAuTwVwPtUqHE$.GqMrFpN6.XqFrLrRsQvDxDwWuFqPI$.IqNrCpO5.ApMqUsHtNuRwPxTxCuFqPJ$2.qDrGqHJ4.VqNsFuBwIyB2yOxAtUqKI$2.pIrBrGpTF2.UqWtDvKxL4yOwLtEpXF$2.CqGrTrWqXtXvGwVyE6yOyBvKsEpLC$3.pArPyE11yOwLtWrCW$4.sGwOxWyM7yOyBwKuMsGqAJ$4.rDtKvKwRtMwC4yOxDvPuCsKqPpAA$9.GvByOxUwEuRtGrUqMpFE$10.rCtUuItMsEqVpUXE$10.pTrFrHqNpQVIA$10.C2MGB!"
+  },
+  {
+   "section": "Pteron",
+   "code": "P4al",
+   "name": "Paraptera",
+   "latin": "Paraptera arcus labens",
+   "rule": "Lenia R=13 T=10 m=0.347 s=0.057 b=1",
+   "cells": "10.C2DC$7.KpBpOpXqDqCpUpMpAMD$5.JpOqVrWsQtAtBsVsMrXrGqMpPTE$4.TqTsUuLvLvXwAvSvIuUuFtOsSrTqRpOPA$3.SrPuKwSyH2yOyJxRxEwPwDvNuTtUsSrMqGpCH$3.rOvFyJ6yOyMyGxXxLwRvTuQtLsEqWpRQA$2.qMuU13yOxRwNvHuCsUrOqGpCG$.JtGxX6yO2yDyL5yOyGxAvTuPtKsDqVpON$.qOvQxQyM4yOwRwBwMxLyI5yOyHxBvXuWtWsSrKqBVD$.sMvLwXyI3yOvNtJtLuLvUxGyH4yOyLxHwLvVvHuKtFrWqMpFG$VsOuHwIyF2yOwKrFqJrGsOuCvRxAxTyCyBxWwUwCvXwDwEvSuXtSsHqUpMJ$pLrCtHvUyB2yOrL.BpIqUsLtVvCvRvTvNuNtTtUuOvSwRxBwOvLuCsPrDpRN$.pXsOvKxTyOvJK3.pEqQrWsRsVsPrSqVqTrOtCvFxGyJyExEvVuJsWrKpVP$.pDsAuVxIyDrSpF4.SpQpWpQW2.JpTsAuWxX3yOxNwCuPtDrOqAQ$.MrKuDwNsUrUqMpAD10.NrLvGxV4yOxNwBuRtFrQqBR$2.qRtEqUqMrJrNqWqDpKpBMC7.rQvHxR4yOyIxAvTuPtFrRqAQ$2.pSK.RpWqUrJrNrOrHqSpRN6.sFvPxRyKyN2yOxWwXwHvOuPtGrQqAQ$7.UpPqGqRrCrHrEqKpFH3.pXtXwRxSxUxOxHwUwAvUwBwDvRuRtGrPpXP$10.FUpOqMrCrAqKpVpNqTuTxPyJxPwGvDuLtMtJuDvIwKwRwBuTtFrOpVM$13.QpUqSrFrMsEwO3yOwQtKrUqOqIrBsLuOwRxSxKwHuUtDrLpRH$15.SpOqEuTxUyI2yOuPpW3.pDrHuDxF2yOxUwHuRtArDpHB$17.rCuWvRwXyHyGrT5.qOuFxT3yOxUwDuJsOqPS$17.rTsMtSvLxMvBpW5.qNuRxN4yOxKvQtVrWpSD$16.FpIqLsDuGtVrOqMG4.rAuKxF4yOyMwQuXtBqTQ$18.TqUrFpHqXrDpD4.qWuAwNyD4yOxLvUuBrTpI$19.K2.qArFqJN3.qNtHvJwXyC3yOyDwQuXsQpXD$22.TqLrBqDM2.pWsDtUvHwPxTyM2yOxLvTtKqNH$23.pCqQrDqBI.VqPsCtMuVwKxV2yOyHwPuArAM$24.pJrDrFpH2.VqHrQtFvExI3yOxJuMrEO$24.DqGrPqIF2.KpXrWuLxJ3yOxXuPrDM$25.pIrJrDV3.NrEvAyL3yOyGuLqSH$25.JqQrNqCJ2.FsQxX4yOxVtTqCB$26.pQrHrFpWUJrWyI5yOwTsOpE$26.KqIrMrNrDtN7yOuXqWF$27.pAqPrTuF7yOwQsMpA$28.pCrNxMxSxTxRxPxSyCxGtIpQ$29.uHvD3vJvOwFwOtFpQ$28.qDsBsIsKsLsStMuPrXV$28.WpHpKpLpRqKrQqA$33.L!"
+  },
+  {
+   "section": "Pteron",
+   "code": "P5cl",
+   "name": "Pentapteryx",
+   "latin": "Pentapteryx cavus labens",
+   "rule": "Lenia R=13 T=10 m=0.34 s=0.051 b=1",
+   "cells": "9.AD2EC$6.CPpGpSqCqEqBpTpJVIB$5.RpXrFsEsR2sWsRsHrSrAqEpJPD$4.pIrJtFuNvIvPvQvMvEuSuDtIsKrLqLpMQD$3.pKsGuWwTxUyFyExWxSxMxCwLvQuRtQsPrNqMpMPB$2.QsGvU10yOxWwWvVuUtSsQrOqLpKM$2.rBvM13yOyAwVvSuRtQsPrLqFpBG$.MtSyM6yOyKyL6yOyGxCwDvIuMtMsGqVpOM$.qNwCyL5yOxIwRwXxOyEyL3yOyBxAwLwFvXvJuGsUrIpWTC$.sIxFxVyN3yOwXuMuCuPvJwCwP2wWwVvSvIvPwLxExDwFuTtFrPqIpEH$.tOvTwXyH3yOtJrIrNsGtAtPuBuFuDtJsQsVuEwHyHyOyEwQvCtOsGqWpRSC$QtBuDvUxV2yOwHpPNpDpVqNrD2rIrCqBpUqQsTwG3yOyNxAvOuHsXrSqNpKNB$pFqXsLuSxH2yOsU4.CLNM3.VrXwQ5yOxJvWuRtQsPrKqGpGND$.WqXtRwMyJyOqPE11.rUwP5yOxWwEvEuPuFtLsJrGqFpKTG$2.pQsPvKxPvKrIpMH10.sNxL4yOyIvXuGtTuFuVvCuLtKsIrKqPpTpAH$2.MrLuDwHrKrQrEqEpDI8.uQ4yOxKuVsGrFrLsSuRwGwKvOuNtQsVrXrApWWE$3.qFsPqIpIqEqUrDqXqLpQWJA2.EsJ4yOxAtTqJRKpHrFuFxFyIxSwUwAvFuGtEsBqUpPOA$3.UpT3.RpKqAqLqTqUqNqHqEqIrL5yOsTT4.qBtXyH3yOyJxJwFvBuAsWrPqHpDH$11.EpApTqLqWrIrQwWyIyL2yOvX6.pHuEyI5yOxKwGvLuRtPsIqXpSRA$14.FWpKrMwHwIwXyGyOrD6.pBuUyJ5yOxHwKwGwCvLuItArQqIpBF$17.tAtKtTvExLyOpF6.pKvJ4yOyKxCvOvLwGxBxCwHvBtRsHqUpKH$17.qPqSrPtPwOtGpW6.qPxM3yOxWwEtQsWtRvNxOyOyExCvRuGsTrEpNG$18.HpUsLuMrSqTK5.vC3yOyLuXrWqHqLrXuNxQ3yOxRwFuRtArEpIB$19.JrMKqVrLpWMCDQtB4yOwBqV2.JqMtPwTyL3yOyDwMuTsWqUU$22.pPrErFqPqMqWrU5yOsI4.pJsWvLxQ4yOyDwIuMsJqAF$22.CpSqSrHrMrPvUwXwSxN2yOM4.MrNuAwHyA4yOxSvWtUrHV$24.TpJpMpSuPuBuKvUxUvEpJ5.qEsMuPwMxV4yOxGvDsNpRA$27.rRrJrHsIuIwRrRqNH4.RqXsVuPwHxSyN3yOwLtQqNF$27.UJWqMsVrAqSrFpO5.pGrDsRuMwKyD3yOxRuPrFM$30.pBqJ.pFqSqVpH5.pFqVsRvFxV4yOvKrQP$34.pEqMqRpJA4.pCrGuRyK4yOvVrTO$35.WqIqUpPG4.qQwC5yOvUrKH$36.QqGqXqAO3.tC6yOvCqN$37.NqIrCqPpSpGrS6yOyLtOpF$38.PqGrHrQrX4yOyMyLyNwErI$39.LqBrIvQyKyHxXxLxGxNxPtDM$40.DqMwLwMwEvOvFvLwFtXpK$41.rXtTtQtEsRsStOtQpR$41.qWqXqPqBpVqLrRpF$41.FA3.JC!"
+  },
+  {
+   "section": "Pteron",
+   "code": "PV1",
+   "name": "Vagopteron",
+   "latin": "Vagopteron vagus",
+   "rule": "Lenia R=25 T=10 m=0.217 s=0.0348 b=1",
+   "cells": "17.GpEpVqIqR2qWqTqNqEpRpERF$15.pKqQrSsOtCtJtMtNtMtItBsPsCrMqWqGpNVH2BA$13.pPrGsPtNuAuFuLuOuQ2uSuRuNuHtVtJsTsBrFqMpSpAKFDB$11.UqWsPtR2uBtWtRtOtSuBuKuTvBvFvEuXuNuAtHsPrVqXqFpIRIFC$10.pOrQtItXtStGsMrUrOrNrUsLtFuAuRvG2vMvFuTuGtOsTsBrDqIpLTKFC$9.pWsCtPtUtGsDqUqApIpFpJpVqSrUtAuCvAvNvSvQvJuUuFtMsQrWrAqFpIQIDA$8.pUsDtQtRsUrHpSO4.MpKqPsAtKuQvMwAwBvSvIuRuBtHsLrPqRpVpBLFB$7.pLrWtPtRsSqWpG7.RpUrGsUuHvLwDwIwFvSvFuNtUtBsErHqJpLQFB$6.WrKtKtUtArCpG7.BPpNqSsHtUvFwDwNwMwFvRvDuKtRsVrXrAqApAFA$5.GqQsXtXtMrRpTD6.FPpCpRqPrUtHuRvUwMwSwPwGvTvFuNtTsVrUqQpNM$5.pOsCtUtXsQqSW5.IRpCpMpVqHqVrTtCuNvWwWxLxNxDwPwEvPuXuBtArSqIpA$4.NrBtHuEtPsCqEP3.ISpFpRqEqNqXrJrVsMtMuVwLxX5yOyJwSvQuOtFrOpVI$3.ApRsFtWuItJrSqCWKLSpEpRqFqSrGrRsBsJsStFtVuVwHxP8yOyBvItIrEpD$3.MqUtEuJuHtGrUqNpQpHpIpPqDqRrGrTsFsMsRsTtCtMuCuIuQvHwFxGyJ7yOxKtIqKB$2.ApHrRtRuPuKtMsIrJqRqIqHqPrDrQsFsN3sSsUtAtJtRtPtLtKtPuEvCwFxO7yOtFpC$2.GqDsMuEuUuPtXtFsNsArRrPrSsDsNsVtAsUsQsMsLsTtItGsXsRsNsJsGsM2sHtFvEyF5yOsN$2.QqTtBuMvBuXuOuFtVtOtHtDtBtDtHtItCsTsLsGsJsStBsRsLsGrUrOqVH3.LpGtJ4yOyIqO$.CpDrHtIuQvFvHvGvFvGvFvCuTuMuGuBtRtIsUsNsKsPtAsOsJrXrNrFqI5.AOpOqUwQ2yOyHwI$.FpMrPtMuRvIvOvSwAwHwNwPwLwCvOvAuLtUtKtCtEtBsOsHrTrJqUqJ7.HpEqIrRwFyOyGxIsK$.KpTrUtNuRvJvSwBwJwUxHxQxUxSxIwOvSvCuJtStFsPsIrRrHqPpXA7.BVqDrJsUwNyDxDvU$ANpWrUtLuPvHvRwBwJwTxIyA3yOyAwUvMuItPsUsJrSrHqMpRU9.RqBrHsHtDwTwVvNrG$BQqArStHuJvBvLvTwBwIwTxV4yOxPvWuItGsMrVrIqMpPN10.QqCrHsAsItOwLvEtN$CRpXrNtAuBuQvDvJvOvSwAxQ4yOyJwMuJsWsFrLqOpOI11.UqHrHrRrPrEuPuTtQT$DRpTrHsPtOuHuPuVvAvCvHxW5yOxFuMsRrSqUpRF12.pEqOrIrHqVqGsVuKtKqJ$CQpPqWsDtCtSuDuGuKuMuQ6yOyAuTsNrJqC13.GpOqVrGqRqCpMsAuAtDrE$BOpLqMrOsNtDtMtStTtVwC7yOvJpS15.PqGrDqTqCpHpIrStMsTrL$.KpFqDrCrUsMsVtCtFtI7yOwBpU15.DpLqRrAqFpGRqHsCtDsKrG$.IXpSqNrHrTsFsLsMuS7yOvSpF15.UqKrBqJpIMqJrSsNsOsDqT$.FSpJqBqPrErMrSrWxC7yOvTpL14.NqArAqRpMpNrSsUtAsQsDrOqF$.AKpBpPqDqNqUrBrDvUyFyOxKyJ3yOwEqMF12.NpTqWrIsPrQtWuCtGsOsBrMqQpL$2.GRpFpQpXqGqIqWuBwBuMvAwV3yOwTsDpAE9.CUqBqXrPtRvNvEuDtFsLrUrHqIpMO$3.JUpFpNpRpSpVsArIqNsQvAxE2yOxKtUqFXHB5.EOpLqLrCrPtWwLvEuCtDsHrOqXpPVH$3.CKUpCpF2pIpGpFpGqEsSvGxMyLxSvJsHqIpKWP2MRpDpOqJqXrBrEtUwIvCuAtBsErHqGQ$4.DJQU2WUSQSqDsWvLxDxKwIuFsEqXqHqBqAqCqJqQrDrFrBqIsUwBuWtVsWsArCpK$5.CHK2MLJIHIqEsTvA2wEvGtWsRrXrOrKrL2rOrGqTpVqTvNuNtQsTrVqTpP$7.D3FEC3BpVsDtXuVuXuLtStBsQsIsCrRrBqIpHMsGuDtHsMrPqOpID$17.pAqVsHtDtItGsTsKrXrIqNpPQ.KsEsXsErJqLpHB$19.pEqHqXrFrCqTqGpMO5.qKrEqIpIF$22.IMI9.LpLN$36.C!"
+  },
+  {
+   "section": "Helicium",
+   "code": "H3s",
+   "name": "Helicium (spins)",
+   "latin": "Helicium solidus",
+   "rule": "Lenia R=13 T=10 m=0.35 s=0.06 b=1",
+   "cells": "9.BG2LID$7.GXpSqIqOqMqFpRpEPE$5.DXqGrOsOtEtHtEsUsKrXrJqPpRTC$4.JpPrKtFuQvMvUvWvX2wAvVvMuRtLrUqCO$3.KqBsEuMwJxNyByI6yOyHwKuErUpRH$2.FpXsKvDxO11yOxIuLrUpRI$2.pKsBvCyE12yOwDtCqQWB9.O$.KrBuHxV4yOyM2yGyM4yOyCuRsNrLpUA9.pEqKpHF$.pKsSwO4yOyFwXwGwJxCyC8yOxOuHrPpWpARNLG2.tArSqLpKXB$.qMuI5yOwEuHtRtWuRwBxO9yOxHuMsTrVrKrBqRqKpWtFuFsSrJqOqM$.rJvO4yOxLtJrQrGrLsGtKvAwWyI7yOyGvSuAsSsBrQ2rOrNsEwNuWtJsHrVpA$BrXwK4yOvKqOpDQVpLqMrVtNvNxFyG2yOwMvGuOtQsLrGqEpLpFpIqArBrWyGwWvHuAtJrC$.sCwRyK3yOtLB5.JpNrBsOtS3.BOSMD5.QqKyCyHxAvPuTsXQ$.rSwJxVyL2yOsP25.JvQyOyGxBwEuMqC$.qXvMwVxT2yOtO26.tP2yOyBxHvQrC$.pTuFvPwNxVyOvWX14.pPpB9.tH3yOyCwHrQ$.HsNuFvBwLxXyBrEpLLB.CJXpRqFqEpOUpJvUwBuPsVrDpQL4.pCuN3yOyNwJrU$2.qNsRtIuQwHxSrVrMqVqKqJqTrPsUuKwGyG5yOyDwSuUtArMqKpTpPqDrSwO4yOvVrN$2.JrGrOsQuEvSrPrDrKrPrVsHtBuFwF9yOxQvVuHtCsIsDsRuPyH4yOuVqU$3.pUpWqQrWtJsNpApNpVqEqLqSrNtAvQ9yOyCwRvMuSuQvJxG4yOxOtMpV$4.GRpQqWsD8.pCrDtRwFyByOyHyG3yOyIxQ2xDxT5yOvLrVU$7.LpMP9.ASqJsPvN6yOyMyN5yOwPtEqEB$19.FpLrNuFxH12yOwUtUrAS$19.MqDsKvAxP10yOyDwGtTrGpE$19.GpPrOtSvRxGyFyOyLyDxTxNxKxDwLvCtDqXpEB$20.GpJqSsDtEtUuHuNuRuVuXuUuKtKrWqGUA$22.FUpNqFqUrJrVsFsHsCrJqJpFH$25.FPpBpL2pQpJUG$28.ACB!"
+  },
+  {
+   "section": "Helicium",
+   "code": "H5s",
+   "name": "Pentahelicium",
+   "latin": "Pentahelicium solidus",
+   "rule": "Lenia R=13 T=10 m=0.34 s=0.045 b=1",
+   "cells": "11.BHNTpApEpFpEpARKD$8.AKpBpQqEqPrBrJrPrSrQrLrCqRqFpPXI$7.OpNqLrHrXsPtFtRuFuM2uRuOuJuBtOsWrXqRpKH$5.GpHqPrTsTtPuKvDvUwNxDxNxTxXyByCxXxNwSvLtSrTpUI22.pFpAG$4.LpXrLsTtWuWvWwUxR12yOwMtWrKpHB21.HrAqGpKpApBN$3.OqGsBtLuRvVxByE7yOyLyM6yOvUtBqNP21.BtAsFrHqPqLqT$2.JqGsHtXvEwKxS6yOyIxJwMwEwOxNyL5yOwEtLqPL20.LtGuFtFsIrVsBpS$.BpSsFuEvNwPyA5yOyNxPvUuDtEsXtOuWxA7yOxQtGpA17.DUpHtHwEvDuCtLtJsC$.VrOuDvUwXyA4yOyMyDwWuRsJqRpUpSqNsDuOxP9yOsE15.XpVqGqMtJxVwWvTuXuTuHpU$BqFtKvVxIyF2yOyLyExRxCwBuCrKpB4.pFsAwA6yOyByN3yO13.pKqJqKqBqDsJyOyHxLwNwDwGrV$MrQvCxM3yOyIxKwNvTuXtOrEH6.pGuMyN3yOtX4.3yOqL9.HpSqRqDV2JqBwLyOyLxUxKxJtMK$pEtAwR4yOxGvRuPtTsSrBJ8.uC3yOvW6.wEyOyJtRsJtFpBpDpGpHpJpQqKqTpUJ3.OuA3yOyHyGuQpO$pTuEyC3yOyMvUtVsSrTqOQ9.wP3yO8.2yOyIxDxGsTsDrMrAqPqKqApDB4.pHsV5yOvIqH$qFuW4yOyNuLsEqWpUM8.EpR4yO8.pU4yOtCqWpJOHC5.MpOqUtJyM4yOvLqN$qGvF5yOtLqKpC5.BJOpBpWrJtL4yOqX8.4yOpE9.pDqJrJsNuPyG4yOvAqI$pVuXyN4yOtPpB4.GpKqHqOqUrCrNsBsPwUwQyC2yO8.3yOvT9.pGrFsItHuJwEyK3yOxVuBpU$pAuDyAyByJ2yOvLpD3.PqEqTqEpKXUVSOsNrOsRyA2yO6.yM3yOtS8.WrPtJuJvEwExM4yOwKsVpE$.sSxCxAxLyFyOyFrGVTpLqKqOpK10.pD3yOqQ3.xH3yOyJuKpP6.UrRuCvNwJxBxSyK2yOyJxEuUrLK$.rBvKvRvXwUxWyOtMqMqKqMqEX13.4yOyN5yOyNvXsFpOA2.BpOrWuOwOxOyDyJ3yOxUwWvLtBqA$.WtJuHuKvDwGxHuCqGqApIJ15.pU9yOxNuSsJqVqFqIrEsUvExIyJ5yOxPwNvKtSrGR$2.rCsWsUtJuIvJtWpGH18.XsUwV6yOyNxAvBtTtHtNuMwFxW6yOxNwHvDtUrVpM$2.QrPrIrOsJtJuDQ20.NqVtQwFyN4yOyLxOwRwKwTxQyM6yOxHvXuTtNrWpVF$3.2pVpWqMrJsEQ21.UqXtLwE6yO2yN7yOxSwPvKuGtCrPpWI$4.NIQpJqEpH21.DpNrRuDwO11yOyDxGwJvLuMtLsIrBpNH$8.DS22.KpWrTtPvFwLxFxOxQxPxMxJxDwQwDvKuRtXtEsHrHqEXC$33.GpHqNrRsPtHtSuAuF2uIuDtStHsRsErNqUqBpDI$35.GVpLqAqMqVrE2rIrGqXqOqFpSpGSG$38.CHOS2WURMHD!"
+  },
+  {
+   "section": "Helicium",
+   "code": "H7s",
+   "name": "Heptahelicium",
+   "latin": "Heptahelicium solidus",
+   "rule": "Lenia R=13 T=10 m=0.38 s=0.056 b=1",
+   "cells": "21.EIN2QPMHD$17.DMpBpPqFqQrArFrGrEqVqLpXpJTIA$15.IpApUqSrQsKtCtPtXuFuHuEtVtJsTsArEqIpMRD$13.LpHqHrKsNtOuMvGvUwJwSxBxFxEwWwLvUvBuDtDsCqXpUTC$11.IpGqJrOsUuCvGwGxCxSyJ8yOyExHwHvEtVsKrApPN$9.DWqCrKsSuDvLwRxT16yOxFvRuBsKqTpHG$8.JpNqVsJtTvFwPxW20yOyBwHuKsKqKS37.QB$7.RqBrPtDuPwCxN6yOyNyLyMyN15yOwPuBrJpD36.qJpVpEQPX$6.VqMsDtSvGwTyH5yOyFxSxJxGxIxMxSxXyByCxXxU2xRxVyH6yOxWuNrJV35.sArOqWqHqBqGD$5.XqRsMuDvRxG5yOyHxKwKvQvGvDvGvNvUwAvXvOuWuHtUtSuCvAwLyC5yOxCtHqCD33.HsGtHsNrVrNrOqO$4.UqRsQuJvXxO5yOxXwPvEuAtFsSsQsVtGtNtMtArXqVqApLpJpTqWsTvOyE5yOvBrGN33.pFsQvBuGtMtA2sWD$3.NqLsPuMwCxQ5yOxTwDuGsPrKqQ2qHqPrDrLrCpTC6.pFsQwV5yOyItQpP31.OpGqGtIwQvXvDuMuHuNqJ$2.EpUsGuJwCxQ5yOxUwAtRrRqCWE.DpCqGqTpX9.qAvQ7yOuBS28.FpFqDqOrBtTyDxMwQwAvRvTsK$2.pCrOuBwAxP5yOyAwGtSrHpF5.pWsAsRrIpFF8.vN9yOO27.pPqSrDqXqStFyAyNyBxKwXxAuGX$.GqLtHvRxN5yOyAwQuHrMV4.JpTtAuVvAtCrUqOT7.xR10yOyI26.rBrUrBpVpJrKwH2yOyIyBxWvRqJ$.pDsBuXxG4yOyLxVwSuXsHpI3.BpDqUsKuGuStVrPrRsBrNpWJ4.tB6yOrD2.3yOxO24.pAsGrVpRKCpSuE4yOyMwRrJ$BqGtNwO4yOyJxPwNvDtEqJ3.PqArI2rTsJsEqVLXqBrMsFrSqVqJqPrW6yO5.sD2yOsI23.qOsUqUI2.pLtA5yOxErW$LrKvCyD3yOyKxKwEuVtKrJU.JpLqSrLrDpXpLpTpJ4.NqKsEtGuAvCwX5yO7.3yOR21.WrXsHpH2.TqKtDxR4yOxBsB$pAsNwM4yOxRwBuNtFrQpR.NqErGrHqGW10.UqTsOuIwPxQyH3yO8.2yOvOqDIH17.OqTsJqRG.WqIrVuExP4yOwMrTC$pMtOxS4yOwRuNsWrLpXKDqErTrEpPC13.FqAsKtIuUyB2yO8.2yOyNwDuMuArApC14.XqOrTrGXFpDqOsAtLvLyA4yOvPrFB$pVuJ5yOvTtBrHpUJ.pErWrSpN19.TuA2yOtT7.4yOyIyDvCtHrNpM10.LpUqXrMqWpIApCqTsJtQvCwUyL3yOyFuMqK$qAuV5yOvDrRpSG.DqSsPqL22.xU2yO7.5yOwJuQtTtGsLqWW4.pDpQpLpNqTrLrDqDWBGqNsOuDvJwQxX4yOwStDpN$pUuW5yOvKqVN2.pE2sCT23.3yOrG4.6yOqKpPpOqDrHsFrRqJpDNqPsCsJrVrRrOqKpCF2.pNsHuKvVxAxX4yOxVvErSR$pGuL5yOxArKJBRqPsKqW25.4yOyI7yOpU4.DpLrIsDrUrOtWuUuLsTrDpLG3.NrKuFwExKyF4yOyGwGtMqHD$GtM2yGyK3yOtJpUpIqGrNrQpN26.10yOvR7.OqJrTtIvHvGtLqHN4.FqRtNwBxPyJ4yOyIwSuOrTpC$.sCxExJxNyAyLyOvNrSqRrBrEqHF26.AtA8yOuM8.EpErUtFsKqH5.QqPtCvQxOyL4yOyIwUvCsTqEE$.qGvIwFwGwRxKyCwNsOqVqPpVS28.GrPxF6yOvGqC8.FqMrFqMpEC2.MpOrDtDvLxLyM4yOyIwTvGtIqXS$.CtEuXuTvDvUwPwMsGpRpFI30.pCsMxD5yOwTsWpR6.SqKrMrRrFqNqCpXqGrAsDtQvPxLyM4yOyIwSvGtNrMpH$2.qUtOtItNuEuVvMrNN32.LrAuT5yOyHvXtKrOqMqCqFqRrNsNtJtStOtEsR2sKsStMuRwGxRyN4yOyEwPvCtMrQpPE$2.GsHrWrXsKtDtSrC33.DqAtFwX5yOyIxCvRuVuMuOuXvMvWwEwCvUvKvAuTuVvHwCxDyD5yOxUwIuUtGrNpRG$3.qHqPqLqSrIsAqX34.SrCuCxE6yOyMyHyCyByD2yEyDxXxQxJxDxAxDxMyByM5yOxIvUuJsVrFpOG$4.pGXpDpOqEqR35.UqUtEvNxS14yOyMyKyJyL6yOyAwOvDtRsGqSpFE$4.A3.JV36.JpTrNtKvHxD20yOyHwXvPuGsUrMqBUA$47.BUqErStLvCwPyA15yOyAwXvSuLtErTqNpII$49.HpHqOsAtKuRvVwWxV8yOyJxUxGwLvLuItDrVqQpOPA$50.AOpNqPrRsTtUuSvPwHwRxAxBwWwRwJvVvIuOtRsQrOqMpMQC$52.BMpFqBqWrTsOtGtRuBuEuCtWtOtCsLrQqUpXpELB$55.FQpFpTqIqRrBrErDqWqPqEpPpCOE$58.BFJNPOLHE!"
+  },
+  {
+   "section": "Kronium",
+   "code": "K4s",
+   "name": "Kronium",
+   "latin": "Kronium solidus",
+   "rule": "Lenia R=18 T=10 m=0.24 s=0.029 b=1;1/3",
+   "cells": "9.GL2OGB$6.BpPrIsM2tDsPrVqTpPO$5.pKsRvRyD4yOxHvRtVrVpUE$4.qEuS10yOwFtLqRJ$3.OuF6yOyL5yOxHuCqTE$3.sFyG3yOxEuCtDtTvJxHyL3yOxHtQpX$2.pPwX3yOsC3.BqHtBvWyG3yOwIsFO$2.uP3yO7.pIsMvRyG2yOyLuFpS$.qMyI2yO9.pPtBwN3yOvWrA$.vGyOwN4.qJsHrQqEB2.qTuNyB2yOxCrSB$pPxMyOpN3.yLwSqMpUrIrA2.TsUxC2yOxRsFG$sHyGvEJ2.xWxC3.GrXL2.rQwL2yOxRsCE$sUxEtVJ.tVuXpN4.sPO2.qWwN2yOxErN$rIvRuFpFrIqRsHpU3.pDtT3.rAxP2yOvWqM$pItTuUwFqMrAsFrQpD2.yBqE3.tG3yOuApF$.tVyGwFvMtBrVrXsHtQyOsK3.ByG2yOxUrQB$.sWtVyLyOvBqTpFvJwDpD4.yB3yOuCpF$2.tBxCyOvJpDqWqM5.4yOwAqE$2.qTuUwVuAsRTB.BLsW4yOwLqM$3.rGsHvWuAsUsCsPuI4yOxHuNpX$4.2sCuIvMwSyLyOyLxWvWtJqOB$6.qJsKuKuStTsHpP$7.B!"
+  },
+  {
+   "section": "Kronium",
+   "code": "KG4",
+   "name": "Gyrokronium",
+   "latin": "Gyrokronium gyrans",
+   "rule": "Lenia R=18 T=10 m=0.22 s=0.026 b=1;1/3",
+   "cells": "8.LpDpSqJqRqJpF$5.EpXrStJvExH3yOyLwStJqC$4.pArStVvMxE6yOyIxEvRrXL$3.pFsFtVvEwSyIyOyGvJtVvR2yOyIwXvOtVQ$2.OrVtJuAvJxEyOxPuIpU2.VxP2yOxHvOuCpU$2.qRtBtOuKwFyBxJvEsKpN4.rG2yOxUvJsRpS$.QsFtTuKvRxHxPwAtTrDJ6.qRyDxUuIqH$.pUtDuUwAxCxRwLuPsFpA8.qHuIwVrQ$.qMuAwDxPyBwSuIrVV.LpKpUT4.ErXuPtV$BqTuNxJyOxRuNrLG.pKqWqEpSsPxUqW3.qHuFvRpF$EqTuU2yOwFsHpD2.qCpA4.yIvB2.pUtOvBqR$EqRvE2yOuPqT3.pUL4.pSvOuPBqJtGsCrV$EqOvMyOyLtVqE3.pDpP4.pSrXvMrGrAsWrIqO$BqJvOyOyLuFqM4.rSpX2.TrArQrGyDrVsKqJ.G$.qHvJ2yOvTsCpF3.LvOyOrQrIqWqTrLyOsKrNpN$.pSuN2yOxUvBsCpA4.rXvTJGpStBwVvBqJO$.pDtDyB2yOyGwQuCqM4.pN2.qHwIxExHpD$.GrIvO5yOyIwV6.tDyOwAvG$2.pIsWyD6yOuUV2.BqHwAwXsPtB$3.pXuA2yOyI4yOxHtLsHtBuUwDsRTpN$4.pUuIxMwIsCuA3yOwXvMuUuKsKTQ$5.pFsMtOrQpA.pKpUqCpIpPqE$7.pFpIJ!"
+  },
+  {
+   "section": "Kronium",
+   "code": "K7a",
+   "name": "Aurokronium",
+   "latin": "Aurokronium arcus",
+   "rule": "Lenia R=18 T=10 m=0.27 s=0.036 b=1;1/3",
+   "cells": "8.QpK2pSpN3pKpIpFpDTJ$6.pIrIsWtTtVtQ2tL2tOtLtJtDsPrVqRpFB$4.GrGuKwLxRyIyGyBxWxUxHwSwNwQwSwLvRuKsRqML$3.JsRwX8yOyL2wVyD3yOxUwAtVrIV$3.sU10yOvRtTuPxM5yOwSuNrVpF$2.qR10yOvRqRpNrLvMyG4yOyBwQuXsFpK$2.vR4yOyGxWyGyIyDvRpK2.TsUwVyIyOyIxUxC2wXvGsKpPB$.pS4yOyGvEuNuXvJuKpK4.qHuPwNwLvGuFtTvO2xWvMsMqCE$.sWyByL2yOuUqMqJqWrDV6.rVtDsCqJpKqCtLyI2yOvRtBqJE$.vWwAxJ2yOpA11.2T4.rVyD3yOwFtJpX$.tLtBvOyLyO6.EG10.rDyD4yOwIsPO$TpPpUtLyBwN5.qCsCrQpP9.qRxU5yOvEqH$3.rNxMtV4.qMvJvEvGrV9.qJwS5yOxPsKB$3.pSxJuX3.ExUwAvTyOrG4.GTE2.pKuKxCyI4yOuIL$3.JxEvW3.vEyOvE2yO5.sFsRqRB2.rGtTwFyG3yOwApD$4.yOvJ3.2yOxRyOsR5.xJvOtVpD3.qJtGxE3yOxHpI$3.pAyOsC2.B3yOyG5.tJyOvEvTqE4.qMxC3yOxMpA$3.qOyOV2.tQyL2yOqT5.yLyOuUxMpX4.pK4yOwLE$3.uAyOpI2.tV2yOxE6.2yOwSyOL4.uK4yOtQ$3.uNyOrIQGxR2yOqO6.4yO4.pF2yOyBxUyGpU$3.tTvRtQsFwA3yOqH5.sR3yOtB3.pUyByGwFvEwAvE$3.sHtTuNuS2yOyLyOsRpP4.yG2yOxH3.pPwLxWuI2rSuCpN$3.LrAtGwIxJwQwItBtJsMqTqCqErD2yOxHsC3.xExJsWQ.VsR$5.pXuKtQ2sPpPrLsU2sWtQ3yOuU3.tGyOtJ$6.pXpAEJ.VqTrQrVsUxW2yOsW2.TyOwS$13.ELtVvTyByOsKqEqHxCyLB$15.qHtDwNyIuUuAvGyItB$16.qMuIvJuFuPwDuC$17.rNqMrGrIsK$17.L!"
+  },
+  {
+   "section": "Geminium",
+   "code": "3GH2s",
+   "name": "Hydrogeminium",
+   "latin": "Hydrogeminium saliens",
+   "rule": "Lenia R=27 T=10 m=0.28 s=0.042 b=11/12;11/12;1",
+   "cells": "53.BD2ECA$49.CSpNqDqMqS2qVqOqBpJQE$48.QqCrRuCvQwKwPwMwCvJuKtFrTqJpDF$46.BpDqTvK10yOxAuPsGqEO$45.KpTtS14yOxItTqTQ$43.IpXtI18yOuQqRK$41.GrBvL21yOuTqEE$40.qGvH24yOuLpOB$38.JsT27yOtVpGA$37.pOwD29yOtHpFB$36.qR32yOsSpHC$35.sK33yOxUsFpGB$33.qKwD35yOwGrMU$31.WuF13yOwCtJtFvLxS20yOuGqIF$31.uW13yOtJ4.sVxGyN18yOxFsBW$30.qD12yOxI7.sCwMxUyDyGyL15yOtTpUA$30.rV9yOuG11.NsDsEsAtJwDyJ13yOvIqRF$30.uX7yOtX18.pAvN13yOwOrLL$29.rQ8yO20.rPxX12yOxKsAQ$28.qA8yOvL20.pGxK12yOxVsFS$27.BxX8yON20.pGxL12yOyAsDS$27.vV8yOvB21.qNxO12yOxVrSO$26.tEyN8yOpX21.qRxH12yOxKrGI$25.pTxV8yOrJ23.vSyK11yOwPqPC$25.tHyI7yOqU24.rDxD11yOvGpW$24.qPvX7yOrH26.tTyD10yOtBpD$23.qRuM8yOH26.pIxG9yOxCrEI$22.rJvC9yO28.wW9yOsGpJ$20.qDsWwE10yOG26.pXxV8yOtXpRD$18.sGwEyF12yOsN26.uS8yOwFpQF$16.qEyG15yOyKK24.uB9yOqCF$15.sLyL17yOrU23.pV9yOtHL$14.tFyN13yOvUwP3yOuC23.10yOpP$11.WqXuR14yOtTqTrVvO2yOtP23.9yOsSA$10.tCxE15yOxKrOSpPtDwOxJsH22.wS8yOxFpA$9.uI17yOvSrDTpPsTvVwLsB22.9yOqP$8.sR11yOwUuMvIxM2yOxEtWqVpNqRtTwSxJtP21.vC8yOrW$7.qNyK10yOqS5.pTrPqPpKpJrGuQxWyOwP17.EQuWyJ8yOsU$6.HxM10yO12.pFtLxT2yOvKpV13.pQtR11yOtGD$6.wQyD8yOqU15.pDwJ2yOwVvHvRxGxCuKN5.BrO12yOtEF$5.wCxOyK6yOrMpE17.rByNyOxHwHxB4yOsG3.HsE12yOtMA$4.vDxEyD5yOuJpGD19.vFwBvCuGvCxX20yOvJ$3.qBwKxUyL5yOpNA20.rIsQrVqXrQuT19yOyHpK$3.uWxGyH5yOtDP21.QqJpUVpHsJyA18yOrO$2.rRvXxTyN5yOsIH22.qCqGpPqBtC15yOyNxEvIrK$2.tQwOyE6yOrXF22.rTtGtRuTxX13yOwXrXpC$.MuFwWyI5yOyArTG21.PuNxS15yOtFF$.qPuKxByK5yOxBrSI22.xA12yOyNyKvXpI$.qUuKxByL5yOwMrUM22.yG11yOxSvMrD$.qVuIwWyJ5yOwOsDS22.yE9yOwMtBqF$.qWuFwSyG5yOxHsRpE22.xX8yOvWrXJ$.rAuDwOyD6yOtPpRB21.yC7yOwArSA$.rEuCwKxX6yOuVqOI21.yI6yOyIsK$DrJuCwHxTyN5yOwMrUpCB19.wA7yOvUpC$HrMuDwGxRyL5yOyKtKqHOA17.vO8yOsI$ErKuCwDxOyK6yOvDrVpRL16.qB8yOxK$.rBtTvVxJyH6yOxAtRrHpNK14.pO8yOyMpJ$.qJtFvKxAyC7yOvWtLrKpRM12.V8yOyNqU$.pLsJuQwKxQyK7yOwLuGsFqJpBH9.GsB7yOyNqR$.KrItRvNxAyByN8yOwGtXsBqOpOWLEA2.AJpX7yOxCpS$2.qDsNuLwAxHyF10yOwSuRtHsIrRrFqUqLqGqLrI8yOqX$2.WrHtFuUwHxMyH11yOxSwVwPwTxA11yOvMH$3.qArWtOvCwMxPyJ26yOsD$3.VqPsGtTvGwPxRyJ24yOtC$4.pLqXsKtWvJwQxQyHyN20yOyJqE$4.HpQrBsMtXvIwNxKyAyHyLyN12yOyNyJyDxRuA$5.IpNqVsItTvBwCwVxJxRxWyDyIyM7yOyMyHxXxLwQpL$7.pAqJrUtFuJvGvWwIwPwWxFxOxXyGyJ2yLyIyExUxJwQvP$8.CpKqUsCtCtUuJuRvBvJvSwFwPwWxDxExBwRwCvDpL$11.pDqGrDrTsEsMsTtDtNtXuIuOuQuJtRI$14.PpCpJpOpTqBqIqOqRU!"
+  },
+  {
+   "section": "Geminium",
+   "code": "2GG2g",
+   "name": "Gyrogeminium",
+   "latin": "Gyrogeminium gyrans",
+   "rule": "Lenia R=18 T=10 m=0.32 s=0.05 b=3/4;1",
+   "cells": "19.DFIL2MKHEB$15.AFNUpFpMpQpRpPpLpFVOHC$13.CKVpKqAqNqXrFrHrFqWqMqBpNpCQIC$11.AJXpQqKrGrWsMsTsVsTsLsBrLqVqHpTpHVMFB$10.ESpNqLrLsKtHtWuIuMuKuDtQtBsLrVrIqUqIpVpJpAOGB$9.IpCqCrFsJtLuMvGvS2vXvSvIuTuFtQtEsRsGrTrIqUqHpTpHUMFCB$8.LpKqOrUtEuKvPwLxAxIxMxKxCwOwBvOvDuRuHtWtMtCsPsDrOrBqOqGqBpWpV2pUpSpQpOpLpIpEXRKEA$7.NpRrBsKtVvHwOxOyE4yOyKxXxMxCwQwGvVvOvFuVuMuCtStLtHtItLtO2tQtPtLtFsXsRsKsDrSrHqQpXpGOD$6.MpVrLsXuMwBxM10yOyNyBxOxGwXwSwOwK2wHwLwQwWxBxE2xGxExCwXwTwPwLwEvQvBuEtDsAqUpRRC$5.HpWrStLvDwSyG13yOyLyDyAyByEyK18yOyDwUvLtVsHqSpJJ$4.ApPrTtUvQxI42yOxAvFtHrLpTN$4.pBrOuAwBxU5yOyLyN17yOyNyJ2yFyIyL14yOxTvUtSrSpWN$3.DqWtUwHyH4yOyJxXxWyEyL6yOyNyLyJyIyJ2yLyIxQwGvOvWwDwOxCxMxUyByGyL11yOxXvWtRrOpRJ$3.pRtFwEyN4yOyExGwTxBxPyCyJyKyLyKyJyGyCxX3xWxVxNvNtFsAsDsOtGuBuRvGvQwBwKwVxIxSyCyHyL7yOxOvLtFrApEC$2.ArVvPyN4yOyHwS2vNwDwWxMxTxUxTxQxNxKxJxI2xJxHwTuFrApARXpLqFqWrNsAsJsStFtTuLvDvTwJxAxOyDyM5yOwRuMsGqDN$2.pSuIyB5yOwSuNtTuIvFwCwPwSwRwOwKwIwJwOwUwXwWwJtWpX7.GOWpHpTqJrCrXtBuGvMwQxQyI5yOxNvItCqWpCB$2.sAwU5yOxOuLsHsLtHuHvBvKvJvFvAuVuWvGvVwKwQwHuKqB14.KpXrStQvKwVxWyM5yOyCvUtOrKpLE$.QuL6yOvLrRqKrKsItItVuAtTtNtHtGtMuHvJwFwHvEqX16.pUsJuRwPxUyL7yOwEtUrPpQH$.qSwU5yOyAsRpKXqIrIsFsNsLsErUrOrPsFtNvDwCvPsK16.FrJuHwOyB9yOwPuCrRpRI$.sV6yOwCqB2.pHqIrArDqUqLqBpUpWrAtEvGvXuKpF16.qHtNwFyA10yOxJuMrVpRH$.uSyN5yOtQA2.LpJpSpNpERIDKqJtIvSvVsJ16.RsDuWxDyK10yOyJvEsFpSG$pCwJyI5yOrO4.QMB5.qHuFwVvXqS16.qCsUvExEyK11yOvUsNpUF$qKxHyByK3yOyMqB4.E7.qTwByOwHpGDB14.qGsMuOwNyB11yOwJsVpWF$rMwTxOyDyL2yOxDXC.CFB7.sH2yOwXpTpEUPG12.pNrMtLvMxJyK10yOwQtApWD$sIwGxBxQyF2yOvXpIKHNQF7.vC2yOxMrRqXqMqBpKO11.IqGsGuLwQyE10yOwPsVpSC$tBvPwLxDxTyKyOvCqApBWpDpCK6.EyN2yOxMtKsRsFrRrCqEW11.pGrOuGwVyM10yOwDsJpK$tNvAvTwNxIyFyOuMqSpVpRpVpPSA5.rF3yOwOuCtJsRsCrSrKqPpGC4.DLG2.pUsSwAyK11yOvDrOW$tJuJvDvVwRxRyMuArJqRqNqPqEpGJ3.AXuMyOyMyGuTtNsPrQrAqTrBrKrDpVSKTpVrCrMqVqBrNuCxI12yOxDtOqMJ$sStQuLvFwBxDyEtNrVrKrHrFqVqBpENKLpDqTwTyJxMwWsUrXqUpSpCpBpNqNrNrSrGrErXtCtUuDuAvX14yOxPuPrRpGA$sDtAtSuMvJwKxMsXrWrTrSrQrHqSqEpQpOpVqRsCxIxCvTvCqUpXR4.WqMrXsRtDtPtUtXuNvJ10yOyDwJwBwKvQtXrUpSH$rLsItCtTuPvOwQsHrMrPrRrQrJrBqUqQqRqXrLrXwHvItVsQP7.pCrEsRtJtGsMsGtFvByK8yOuEqSqRrFrPrKqNpII$qTrPsJtDtUuRvSrNqRqXrDrCqX3qT2qUqXqWuMtNsAqB9.pUrTsJrKpVpNqTtTxDxXyJ5yOsKpVpBOK2LGA$qEqXrPsItCtVuTqTpQpXqEqDqBpX3qBpXpTpLsLrUqG11.pVqAH3.rLuUwCxAxTyJ2yOrAUE$pKqFqWrNsGtAtUpVOVpCpBXW2XVSLAqGqHP17.ArJsUuCvJwOwRqL$RpLqEqUrKsEsVpB12.AT20.CpIqMrDqK$ASpJqCqPrGrXI$2.PpGpUqJrA$3.LpBpLqB$4.EOpC$6.D!"
+  },
+  {
+   "section": "Geminium",
+   "code": "3G7n",
+   "name": "Heptageminium",
+   "latin": "Heptageminium natans",
+   "rule": "Lenia R=10 T=10 m=0.34 s=0.051 b=3/4;1;1",
+   "cells": "26.BGLQOLGB$15.5BGJOTpDpKpUqEqHqJqMqOqJqCpSpNpI2pFpAVT2VTLE$12.GVpKpNpKpNpUqEqHqOrArNsFsUtLtQtOtJtQ2uAtQtDsRsHrXrVrSrLrD3rAqOpXpFOGB$10.EpIqRrS2sHsKsUtG2tLtTuIvEwAwSxJxR2xMxRxUxRxHwSwFvRvJ2vGvEuSuItVtTtQtBsFrDqJpSpFTLGB$9.QqMsMuFvGvRvTwDwLwSwXxExMxWyL17yOyIxUxH2xCwQvRuPtOsPrSrDqOqCpPpDOB$8.pArLuCwDxP10yO2yL8yOyL3yI10yOyLxPwQvTuXuAtGsKrNrAqJpNO$7.QrNuUxP9yOyIxMwNwFwIwXxMxUyGyIyGxWxMwSvWvMvOwLxPyI10yOyIxRwVvWuXtVtBsKrQqOpFB$6.BqTuPyB7yOyLxWxEvRtVrXrLrXtQvBvWwVxJwSvTvBtOrSqWrIsMuFwAxExUyDyGxUxJxHxExJxW4yOxUwVvWvBuFsWrIpNE$6.pNtTxU6yOyGxWxCvOtQrLpA3.pPsFtTvMwIvEtDrNpK3.BpUsPuXwD2wVwAvEuPuIuNvOwVyD5yOyIxHvWuArSpKB$5.GsFwX4yOyIxWxPwVvWuSsRpX6.pNrXuNvTuFrAG6.pDsHtT2uXtLsHrSrGrNsMtVvTxR7yOxJuXrXpF$5.pKuP4yOyBwQ2wDvGtVrXpN7.JrLuNvWuAqE8.pPrXuCuArLpPpA2.pAqRtBvWxWyL6yOyIvGrQQ$5.rGwQ3yOxWwAuIuAuItTsFpU8.LsMvWxEuUqH8.pDsFuStTqE6.qHtVwQxRyG7yOuSqO$4.VtT3yOyBvRtOsMrXrNrGqML7.EpPvE2yOyLsRE7.qTuSvTtJpP7.qMtVvOwVxMxUyG4yOyGtLpD$4.qMwV2yOyLvMsMqOqEpSTEOG2B2EGpKqEqMtB4yOwFqTpKV2EOVpXuK2yOvOsKJ7.rAsWuAuKuPvOxH4yOxErV$3.BsK3yOwQsMpN5.pIrQ2qTqWqRrDsPtBtDvJxP2xMxEwLtBsKrX2qOrQrXsWwQyL2yOwSrQpNT6.pApFpXrGsWvExP4yOvJpU$3.QtO3yOuFpP5.GsWvWtQsRsMsWtJtLsMrVsUuIuFuIuAsWrLrSsUtDtBsMsCsMvGwFwXxMxHuCsWsHqMVQJB4.VqJsCuPxR3yOyDsMB$3.pNvO3yOqW5.EqWwLwQtJqTqHrArLqJpAOLpX2qRqOQGQqErSrGpSpFpXsCtBtTuNuF2tJtLtGsFrSrDqCT5.OrAuKyB3yOtTT$3.rA4yOpA5.qEuUxMuCqC16.J4.TpPqHqWqEpSqCrIsUsMsHsPsRrNT5.pIsWwX3yOuXpD$3.tD3yOxWpA4.pPtDwAuIqJ30.pN2pKqJsKtVqT5.QsCwL3yOwDqT$2.pKwA3yOuS4.pAsHvBuNV35.qRuXtJO5.qMuKyD2yOvRrIJ$2.sM4yOrN3.OrSvEwArX36.QuFwFrXG4.rIuNxR2yOvTqJJ$.GvJ4yOsR2.GpKvBwXvBV37.rAwAuPpA3.qTvMyG3yOvMpPB$.pD2yOxWxMyIrA2.JqMxUwXsC39.tQwXsK4.qTxH3yOxCpF$.sH2yO2wNuX4.sUyOvM40.pSwLwXsFrIT.qE5yOrD$BxR2yOvTwFrG4.xCyOsU41.tLwFsUrLqRpI6yOsP$qR2yOxMtQuI4.B2yOpF41.qWwAvTuSuArX5yOuUqM$uC2yOxCtOuA4.rI2yO43.vEyOyLuXT.tQ3yOuSpI$vR3yOyIwQBLBpF2yOvR43.vTyOvWsM2.4yOxHpS$wN4yOvRpFsPqMtV2yOsR42.rS2yOrLqE2.vOyLxU2yOqC$wS4yOsCrLxEtTuC2yO43.sM2yOtJ5.sK2yOpX$uFyD3yOuXvByOwSvGyOxJ43.pA2yOQ4.qEqCxHyOsW$qCvT2yOyIwNxM2yOwSwLsC44.yOwS4.pNtDpAuCyOwX$.rDxEyOyIvWxU2yOuUsR45.2yO7.tV2yO$2.tDwXwVtDuSxCvWsCQ44.T2yOJ6.yL2yO$2.JsHsPQpArLrIpF46.xWyOQJpXBrDyOuK3yO$8.G47.uUyOsPsRvBpKtL4yOxU$56.tTyL3yOrQrA3yOyLwI$56.uAxU2yOyLwFyOyLyOyIwXwS$56.rAvGxRyOyIyGyDxRyDxMwLwS$57.qMsHxExRxU2yDyBwLuKrA$57.GqEuPvOvBwQwNvOtJpP$58.pKuAtD2GqWrDrS$63.qRrG!"
+  },
+  {
+   "section": "Still life",
+   "code": "2F5l",
+   "name": "Pentafolium",
+   "latin": "Pentafolium lithos",
+   "rule": "Lenia R=30 T=10 m=0.15 s=0.0083 b=3/4;5/6",
+   "cells": "10.6yOpT$8.yLyOpN3.C2yOxU$7.2yO7.3yO$7.yO8.vP12yO$6.2yO8.sN8yOU2.2yO$6.2yO8.7yOyL5.pPyO$6.2yO7.8yO7.wRyO$6.2yOwM4.wL9yO8.yO$5.uH11yOwB2.3yOyB7.yOtH$5.11yO5.3yO7.2yO$4.9yOrG7.4yO6.yOxL$2.tF7yO12.4yOvA3.2yO$.wS7yOuE13.9yO$.yOxQ2.F3yO15.7yOxQ$yOvO4.qH2yOrF15.6yOqE$yO6.2yOyF16.5yO$yO6.3yO16.6yO$yO6.3yO16.6yO$yO6.3yO15.8yO$yO6.2yO15.4yO3.2yO$yO5.pN2yO14.rO3yO5.yO$JyO4.3yO14.3yO6.yOuH$.3yOvR5yO13.3yO6.yOsU$2.9yOsP11.3yO6.yO$3.tO13yO5.yA2yOsJ6.yO$5.qA13yOvBFwH3yO6.uIyO$7.4yOsVrErCsDxP9yOL5.yO$7.3yO7.qX8yO3.2yO$7.3yO8.C11yO$8.2yO9.9yOqE$8.2yO9.3yO$9.2yO7.3yO$10.2yOrH4.3yO$12.6yOqG!"
+  },
+  {
+   "section": "Still life",
+   "code": "3R5s",
+   "name": "Asterium",
+   "latin": "Asterium solidus",
+   "rule": "Lenia R=27 T=10 m=0.23 s=0.027 b=1/4;1",
+   "cells": "18.ApEqKqFM$17.pMuR3yOyCtB$17.wT6yO$16.qH7yO$16.7yOxM$16.7yOyE$15.wD8yOA$15.xC3yOvGuC4yO12.qLpB$15.xX2yOuK3.yE2yOxXD9.rByEyOtJA$15.3yO5.xC3yOsVA7.4yOuA$15.3yO6.rTyC3yOvFpB3.OyE5yOqX$14.uJ2yOpU8.pDwQ13yOvA$14.3yO12.wA11yOvL$13.4yO14.tBwKxRyK6yOuP$4.qSvIvStDpB3.L3yOvS18.pN5yOR$3.xF5yOsSDE4yOuM2.DSWH13.vS3yOyF$2.tX7yOuKyK4yOyJqRrOwT2yOuErHX11.4yON$2.22yOxUsVpUE8.3yOwR$.rQ25yOtUqBC5.3yOxO$.uFyK13yOwSyA11yOqI4.N3yO$.sBwA11yOuF2.qFvE10yOwQO3.3yOA$2.sMvUyL8yOpP5.rTwG9yOqEA.tC3yO$3.sPwD7yOpU7.BrMvN7yOuAqBrN3yO$4.tRwX6yOG10.qWuX11yO$4.SuNxE5yOsIH11.qAsVvKxP7yO$5.PtOwByK4yOvPrBpITOLHC7.pKvI5yOuE$7.KtDwW7yOyAuUrGpPUF6.pT5yOsU$9.QuDyF9yOtWqAN6.yI4yOvXsLpN$11.qSvVyM9yOrMP5.wX7yOxSpH$13.tJxA9yOsLM4.wS9yOqB$14.uAxL9yOtUpA3.11yO$14.uP12yOsOqLxF11yOpK$11.qUwW28yOpR$10.11yOxQwCwQyG16yO$9.5yO2yN6yOqUqArXuKwWyJ13yO$9.3yOuX4.sM4yO5.qJtPwFxTyM7yOyL$8.wR3yO7.3yOrV7.rWuHvJvLvAuOuPvEvItV$8.uR2yOtK7.qB3yO9.pBpRUEOpLD$8.pExN2yOpB7.3yOB$J8.pUxK2yOpT6.3yOpC$11.vL2yOuSpH3.J3yO$12.rBxF3yOwUwR4yO$14.qUvUyJ5yOO$17.qMtIuTuUsS!"
+  },
+  {
+   "section": "Still life",
+   "code": "2D6r",
+   "name": "Hexadentium (turns)",
+   "latin": "Hexadentium rotans",
+   "rule": "Lenia R=18 T=10 m=0.27 s=0.039 b=1;3/4",
+   "cells": "11.JtByOyDwNtTqE$9.EtO4yOyDwDsUO$8.VuU6yOyLwVtQpD2.EpIqJqCG$7.GsMyL9yOxWuUrGpUsUvTxUxPtG$7.pFtLyL19yOO$7.VsW4yOyIwFsWpPErI11yO$7.qM6yOwIrI3.qCxM9yOxW$6.rG7yOxMsF3.JuF4yOyL4yOxMrN$2.2pSqHtJyG7yOyItG3.GtT4yOxPxR3yOwNsW$2.tTuFvWyL2yOvEtLuUyD2yOyLtJ3.LuI3yOyBvMuU3yOvJqR$.wQxHxW3yOrL2.pArVvTxUtB4.BsW2yOyGvMrVqEwD2yOuNG$.yL4yOuI4.BpD8.sCxHuSqT2.pA2yOuP$tQ4yOyBqW21.2yOwA$xP4yOwStVrIO18.O2yOyI$yL4yOyDxPwSvErQ16.ErG3yOqEG$xC8yOxE15.pNsFwN3yOvWrGpA$uK9yO14.qOwA6yOvRsF$rLxE7yOvB14.uI8yOwDL$VsPuN4yOxPuAqJ14.vE9yOpN$.pAqC3yOxErIQ15.tLxCyDyI2yL4yOqC$3.wA2yOsMB17.rAtOvEwLyD4yOpK$3.sW2yOpX20.qJuN5yO$3.rQ2yOsK3.pKtD16.wV5yO$3.rQyByOxU2.rDvRyGyOsM6.qCsPqEB3.sP3yOyIyDqO$2.EsMxP2yOsPsHvTyI2yOxJpX4.wV2yOwLrXpNpDrV2yOyLwVvTvM$2.qEtVxU2yOxJwIyB3yOxEpX3.qWxP4yOxE3yOyDuNsCrQ$3.vMyG3yOyI4yOwSpP3.qJwX7yOyDrX$3.wN9yOyLqR3.pIvOyL6yOqE$4.10yOvJpD2.pKuPxW5yOrA$4.pA11yOxPtVuIwIyD4yOvGqMB$5.OwX3yOwNwQ13yOwAqO$7.qRuCuKsMpUBpAsUvWyB8yOuCO$9.JL4.pFtBwIyI5yOuXO$16.pNtGwLyG3yOrG$17.pU2rSqC!"
+  }
+ ]
+}

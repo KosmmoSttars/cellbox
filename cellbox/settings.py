@@ -2,6 +2,7 @@
 
 import random
 from dataclasses import dataclass
+from pathlib import Path
 
 from PyQt6.QtCore import QByteArray, QSettings
 
@@ -107,6 +108,16 @@ class Settings:
     @maximized.setter
     def maximized(self, on: bool) -> None:
         self.store.setValue("window/maximized", on)
+
+    @property
+    def last_folder(self) -> str:
+        """Where the open and save dialogs start."""
+        folder = str(self.store.value("files/folder", ""))
+        return folder if folder and Path(folder).is_dir() else str(Path.home())
+
+    @last_folder.setter
+    def last_folder(self, folder: str) -> None:
+        self.store.setValue("files/folder", folder)
 
     @property
     def sound(self) -> bool:

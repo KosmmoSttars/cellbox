@@ -2,18 +2,20 @@
 
 import time
 from collections import deque
+from pathlib import Path
 
 from PyQt6.QtCore import QSize, Qt, QTimer
 from PyQt6.QtGui import QAction, QActionGroup, QIcon, QKeySequence
-from PyQt6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel, QMenu, QMenuBar, QSlider, QToolButton,
-                             QVBoxLayout, QWidget)
+from PyQt6.QtWidgets import (QApplication, QFileDialog, QFrame, QHBoxLayout, QLabel, QMenu, QMenuBar, QSlider,
+                             QToolButton, QVBoxLayout, QWidget)
 
 from cellbox.canvas import FieldView
-from cellbox.dialogs import AboutDialog, RuleDialog, SeedDialog
+from cellbox.dialogs import AboutDialog, ErrorDialog, RuleDialog, SeedDialog
 from cellbox.engine import SIZES, Field
 from cellbox.icon import app_icon, icon_pixmap
 from cellbox.palette import color_table
-from cellbox.rules import PRESET_GROUPS, Rule, preset_name
+from cellbox.patterns import Pattern, PatternError, library, load_rle, parse_rle, species, to_rle
+from cellbox.rules import PRESET_GROUPS, AnyRule, LeniaRule, Wireworld, preset_for, preset_name
 from cellbox.settings import SPEED_MAX, Settings, new_seed
 from cellbox.sound import SoundBank
 from cellbox.win95 import Win95Frame, glyph
@@ -21,6 +23,8 @@ from cellbox.win95 import Win95Frame, glyph
 MAX_FRAME_BUDGET = 0.012   # seconds of stepping per frame at Max speed (the rest is for drawing)
 FRAME_MS = 16
 STATUS_EVERY = 0.1         # seconds between status bar refreshes
+PATTERN_ROOM = 3           # a loaded pattern gets a field at least this many times its size, if one exists
+RLE_FILTER = "Patterns (*.rle);;All files (*.*)"
 
 
 class StatusPanel(QLabel):
@@ -35,12 +39,16 @@ class MainWindow(Win95Frame):
     def __init__(self, settings: Settings):
         super().__init__("Cellbox", resizable=True, icon=icon_pixmap(16))
         self.setWindowIcon(app_icon())
+        self.setAcceptDrops(True)
         self.settings = settings
         self.sounds = SoundBank(settings.sound, self)
         self.seeding = settings.seeding
         self.field = Field(settings.size, settings.rule)
         self.view = FieldView(self.field)
         self.view.view_changed.connect(self._update_status)
+        self.view.stamp_requested.connect(self._stamp)
+        self.loaded: str | None = None   # the name of the pattern the field started from, if not a seed
+        self.creature: Pattern | None = None   # the Lenia creature a reseed scatters, when not a preset's
 
         self.running = False
         self.speed = settings.speed
@@ -68,7 +76,7 @@ class MainWindow(Win95Frame):
         lay.addWidget(well, 1)
         lay.addWidget(status)
 
-        self._apply_rule(self.field.rule, save=False)
+        self._apply_rule(self.field.rule, save=False, reseed=False)
         self._apply_speed(self.speed)
         self._restore_window()
         self.reseed()
@@ -86,12 +94,18 @@ class MainWindow(Win95Frame):
         return action
 
     def _build_actions(self) -> None:
+        self.act_open = self._action("&Open Pattern...", self.open_pattern, "Ctrl+O")
+        self.act_paste = self._action("&Paste Pattern", self.paste_pattern, "Ctrl+V")
+        self.act_save = self._action("&Save Pattern As...", self.save_pattern, "Ctrl+S")
+        self.act_copy = self._action("&Copy Pattern", self.copy_pattern, "Ctrl+C")
         self.act_run = self._action("&Run", self.toggle_running, "Space")
         self.act_step = self._action("&Step", self.step_once, "N")
         self.act_reseed = self._action("&Reseed", self.reseed, "R")
         self.act_seed_options = self._action("Seed &Options...", self.seed_options)
         self.act_clear = self._action("&Clear", self.clear, "C")
         self.act_custom = self._action("&Custom...", self.custom_rule)
+        self.act_stop_placing = self._action("S&top Placing\tEsc", self.stop_placing, "Esc")
+        self.act_rotate = self._action("&Turn Pattern\tRight-click", self.view.rotate_pattern, "T")
         self.act_zoom_in = self._action("Zoom &In", self.view.zoom_in, ["+", "="])
         self.act_zoom_out = self._action("Zoom &Out", self.view.zoom_out, ["-"])
         self.act_fit = self._action("&Fit to Window", self.view.fit, "F")
@@ -101,10 +115,11 @@ class MainWindow(Win95Frame):
         self.act_about = self._action("&About Cellbox", lambda: AboutDialog(self).exec())
 
         self._rule_group = QActionGroup(self)
-        self._rule_actions: dict[Rule, QAction] = {}
+        self._rule_actions: dict[AnyRule, QAction] = {}
         for group in PRESET_GROUPS.values():
             for preset in group:
-                action = QAction(f"{preset.name}\t{preset.rule}", self, checkable=True)
+                label = preset.name if preset.rule.family == "lenia" else f"{preset.name}\t{preset.rule}"
+                action = QAction(label, self, checkable=True)
                 action.triggered.connect(lambda _=False, r=preset.rule: self._apply_rule(r))
                 self._rule_group.addAction(action)
                 self._rule_actions[preset.rule] = action
@@ -121,7 +136,8 @@ class MainWindow(Win95Frame):
     def _build_menus(self) -> QMenuBar:
         bar = QMenuBar()
         file = bar.addMenu("&File")
-        file.addAction(self.act_exit)
+        for action in (self.act_open, self.act_save, None, self.act_copy, self.act_paste, None, self.act_exit):
+            file.addSeparator() if action is None else file.addAction(action)
 
         sim = bar.addMenu("&Simulation")
         for action in (self.act_run, self.act_step, None, self.act_reseed, self.act_seed_options,
@@ -130,11 +146,29 @@ class MainWindow(Win95Frame):
 
         self.rules_menu = bar.addMenu("&Rules")
         for title, group in PRESET_GROUPS.items():
+            if len(group) == 1:
+                self.rules_menu.addAction(self._rule_actions[group[0].rule])
+                continue
             sub = self.rules_menu.addMenu(title)
             for preset in group:
                 sub.addAction(self._rule_actions[preset.rule])
         self.rules_menu.addSeparator()
         self.rules_menu.addAction(self.act_custom)
+
+        self.patterns_menu = bar.addMenu("&Patterns")
+        for title, patterns in library().items():
+            sub = self.patterns_menu.addMenu(title)
+            section = None
+            for pattern in patterns:
+                if section is not None and pattern.section != section:
+                    sub.addSeparator()
+                section = pattern.section
+                action = sub.addAction(pattern.name)
+                action.triggered.connect(lambda _=False, p=pattern: self.load_pattern(p))
+        self.patterns_menu.addSeparator()
+        self.patterns_menu.addAction(self.act_open)
+        self.patterns_menu.addAction(self.act_rotate)
+        self.patterns_menu.addAction(self.act_stop_placing)
 
         view = bar.addMenu("&View")
         sizes = view.addMenu("Field &Size")
@@ -148,6 +182,7 @@ class MainWindow(Win95Frame):
 
         help_menu = bar.addMenu("&Help")
         help_menu.addAction(self.act_about)
+        self._update_placing_actions()
         return bar
 
     def _tool(self, name: str, tip: str, slot=None, menu: QMenu | None = None) -> QToolButton:
@@ -179,9 +214,11 @@ class MainWindow(Win95Frame):
         lay.setSpacing(1)
         self.btn_run = self._tool("play", "Run (Space)", self.toggle_running)
         groups = (
+            (self._tool("open", "Open pattern (Ctrl+O)", self.open_pattern),),
             (self.btn_run, self._tool("step", "Step (N)", self.step_once)),
             (self._tool("seed", "Reseed (R)", self.reseed), self._tool("clear", "Clear (C)", self.clear)),
-            (self._tool("rules", "Rules", menu=self.rules_menu),),
+            (self._tool("rules", "Rules", menu=self.rules_menu),
+             self._tool("patterns", "Patterns", menu=self.patterns_menu)),
             (self._tool("zoom_out", "Zoom out (-)", self.view.zoom_out),
              self._tool("zoom_in", "Zoom in (+)", self.view.zoom_in),
              self._tool("fit", "Fit to window (F)", self.view.fit)),
@@ -223,7 +260,6 @@ class MainWindow(Win95Frame):
         self.st_view = StatusPanel(110)
         self.st_seed = StatusPanel(80)
         self.st_generation.setToolTip("Generation")
-        self.st_population.setToolTip("Live cells")
         self.st_rate.setToolTip("Steps per second, measured")
         lay.addWidget(self.st_generation)
         lay.addWidget(self.st_population)
@@ -279,7 +315,13 @@ class MainWindow(Win95Frame):
         if not self.seeding.fixed:
             self.seeding.seed = new_seed()
         self.settings.seeding = self.seeding
-        self.field.seed(self.seeding.density / 100, self.seeding.spot, self.seeding.seed)
+        preset = preset_for(self.field.rule)
+        creature = species(preset.species) if preset and preset.species else None
+        if creature is None and self.creature is not None and self.creature.rule == self.field.rule:
+            creature = self.creature
+        self.field.seed(self.seeding.density / 100, self.seeding.spot, self.seeding.seed,
+                        creature.cells if creature else None)
+        self.loaded = None
         self.view.update()
         self._update_status()
 
@@ -294,20 +336,24 @@ class MainWindow(Win95Frame):
 
     def clear(self) -> None:
         self.field.clear()
+        self.loaded = None
         self.view.update()
         self._update_status()
 
-    def set_size(self, size: int) -> None:
+    def set_size(self, size: int, reseed: bool = True) -> None:
         if size == self.field.size:
             return
         self.field.resize(size)
         self.settings.size = size
-        self.reseed()
+        self._size_actions[size].setChecked(True)
+        if reseed:
+            self.reseed()
         self.view.fit()
 
     # --- rules ------------------------------------------------------------------------------
 
-    def _apply_rule(self, rule: Rule, save: bool = True) -> None:
+    def _apply_rule(self, rule: AnyRule, save: bool = True, reseed: bool = True) -> None:
+        family_changed = rule.family != self.field.rule.family
         self.field.rule = rule
         self.view.set_color_table(color_table(rule))
         action = self._rule_actions.get(rule)
@@ -316,15 +362,167 @@ class MainWindow(Win95Frame):
         elif self._rule_group.checkedAction() is not None:
             self._rule_group.checkedAction().setChecked(False)
         name = preset_name(rule)
-        self.set_title(f"Cellbox - {name or rule}")
+        if name is None and self.creature is not None and self.creature.rule == rule:
+            name = self.creature.name
+        short = name or ("Lenia" if isinstance(rule, LeniaRule) else str(rule))
+        self.set_title(f"Cellbox - {short}")
         self.st_rule.setText(f"{name}  ({rule})" if name else f"Custom  ({rule})")
+        self.st_population.setToolTip("Electron heads" if isinstance(rule, Wireworld)
+                                      else "Sum of all cell values" if isinstance(rule, LeniaRule)
+                                      else "Live cells")
         if save:
             self.settings.rule = rule
+        # a Lenia creature is only itself with its own rule: a new Lenia rule gets a fresh start too
+        if reseed and (family_changed or isinstance(rule, LeniaRule)):
+            self.reseed()
+        self._update_status()
 
     def custom_rule(self) -> None:
         dialog = RuleDialog(self, self.field.rule, self.sounds)
         if dialog.exec():
             self._apply_rule(dialog.rule)
+
+    # --- patterns ---------------------------------------------------------------------------
+
+    def load_pattern(self, pattern: Pattern) -> None:
+        """A fresh field with the pattern in the middle; then more copies can be clicked into place."""
+        if pattern.code is not None:
+            self.creature = pattern
+        if pattern.rule != self.field.rule or pattern.code is not None:
+            self._apply_rule(pattern.rule, reseed=False)
+        biggest = max(pattern.width, pattern.height)
+        if biggest > SIZES[-1]:
+            ErrorDialog("Cellbox", f"{pattern.name} is {pattern.width} x {pattern.height} cells: bigger than "
+                                   f"the biggest field ({SIZES[-1]} x {SIZES[-1]}).", self).exec()
+            return
+        if biggest * PATTERN_ROOM > self.field.size:
+            fitting = [s for s in SIZES if s >= biggest * PATTERN_ROOM] or [SIZES[-1]]
+            self.set_size(fitting[0], reseed=False)
+        self.field.clear()
+        n = self.field.size
+        top, left = (n - pattern.height) // 2, (n - pattern.width) // 2
+        self.field.stamp(pattern.cells, top, left)
+        self.loaded = pattern.name
+        self.view.show_area(n / 2, n / 2, int(pattern.height * 2.5), int(pattern.width * 2.5))
+        self.view.update()
+        self._place(pattern)
+        if not self.running:
+            self.toggle_running()
+
+    def _place(self, pattern: Pattern) -> None:
+        self.view.set_pattern(pattern)
+        self._update_placing_actions()
+        self._update_status()
+
+    def stop_placing(self) -> None:
+        if self.view.pattern is not None:
+            self.view.set_pattern(None)
+            self._update_placing_actions()
+            self._update_status()
+
+    def _update_placing_actions(self) -> None:
+        placing = self.view.pattern is not None
+        self.act_stop_placing.setEnabled(placing)
+        self.act_rotate.setEnabled(placing)
+
+    def _stamp(self, row: int, col: int) -> None:
+        pattern = self.view.pattern
+        if pattern is None:
+            return
+        if pattern.rule.family != self.field.rule.family:
+            self._apply_rule(pattern.rule, reseed=False)
+        try:
+            self.field.stamp(pattern.cells, row, col)
+        except ValueError as e:
+            ErrorDialog("Cellbox", str(e), self).exec()
+            return
+        self.sounds.play("click")
+        self.view.update()
+        self._update_status()
+
+    def _open_text(self, text: str, name: str) -> None:
+        try:
+            pattern = parse_rle(text, name=name)
+        except PatternError as e:
+            self.sounds.play("error")
+            ErrorDialog("Cellbox", str(e), self).exec()
+            return
+        self.load_pattern(pattern)
+
+    def open_path(self, path: Path) -> None:
+        try:
+            pattern = load_rle(path)
+        except PatternError as e:
+            self.sounds.play("error")
+            ErrorDialog("Cellbox", str(e), self).exec()
+            return
+        self.settings.last_folder = str(path.parent)
+        self.load_pattern(pattern)
+
+    def _file_dialog(self, title: str, save: bool, name: str = "") -> str:
+        dialog = QFileDialog(self, title, str(Path(self.settings.last_folder) / name), RLE_FILTER)
+        dialog.setOption(QFileDialog.Option.DontUseNativeDialog)   # keeps the Win95 look
+        dialog.setAcceptMode(QFileDialog.AcceptMode.AcceptSave if save else QFileDialog.AcceptMode.AcceptOpen)
+        dialog.setFileMode(QFileDialog.FileMode.AnyFile if save else QFileDialog.FileMode.ExistingFile)
+        dialog.setDefaultSuffix("rle")
+        if not dialog.exec() or not dialog.selectedFiles():
+            return ""
+        return dialog.selectedFiles()[0]
+
+    def open_pattern(self) -> None:
+        path = self._file_dialog("Open Pattern", save=False)
+        if path:
+            self.open_path(Path(path))
+
+    def paste_pattern(self) -> None:
+        text = QApplication.clipboard().text()
+        if not text.strip():
+            self.sounds.play("error")
+            ErrorDialog("Cellbox", "The clipboard is empty. Copy a pattern in RLE format first, for example "
+                                   "from LifeWiki or Golly.", self).exec()
+            return
+        self._open_text(text, "Pasted pattern")
+
+    def _current_pattern(self) -> Pattern | None:
+        cells = self.field.extract()
+        if cells is None:
+            self.sounds.play("error")
+            ErrorDialog("Cellbox", "The field is empty: there is nothing to save.", self).exec()
+            return None
+        name = self.loaded or "Cellbox pattern"
+        return Pattern(name, self.field.rule, cells,
+                       comments=(f"Generation {self.field.generation:,} in Cellbox.",))
+
+    def save_pattern(self) -> None:
+        pattern = self._current_pattern()
+        if pattern is None:
+            return
+        path = self._file_dialog("Save Pattern As", save=True, name=f"{pattern.name}.rle")
+        if not path:
+            return
+        try:
+            Path(path).write_text(to_rle(pattern), encoding="utf-8")
+        except OSError as e:
+            ErrorDialog("Cellbox", f"Could not save the pattern.\n{e.strerror or e}", self).exec()
+            return
+        self.settings.last_folder = str(Path(path).parent)
+
+    def copy_pattern(self) -> None:
+        pattern = self._current_pattern()
+        if pattern is not None:
+            QApplication.clipboard().setText(to_rle(pattern))
+
+    def dragEnterEvent(self, event) -> None:
+        urls = event.mimeData().urls()
+        if urls and urls[0].isLocalFile() or event.mimeData().hasText():
+            event.acceptProposedAction()
+
+    def dropEvent(self, event) -> None:
+        urls = event.mimeData().urls()
+        if urls and urls[0].isLocalFile():
+            self.open_path(Path(urls[0].toLocalFile()))
+        elif event.mimeData().hasText():
+            self._open_text(event.mimeData().text(), "Dropped pattern")
 
     # --- status, sound, window --------------------------------------------------------------
 
@@ -335,10 +533,20 @@ class MainWindow(Win95Frame):
             self._step_times.popleft()
         f = self.field
         self.st_generation.setText(f"Generation {f.generation:,}")
-        self.st_population.setText(f"Population {f.population:,}")
+        if isinstance(f.rule, LeniaRule):
+            self.st_population.setText(f"Mass {f.population:,.0f}")
+        elif isinstance(f.rule, Wireworld):
+            self.st_population.setText(f"Electrons {f.population:,}")
+        else:
+            self.st_population.setText(f"Population {f.population:,}")
         self.st_rate.setText(f"{len(self._step_times)} steps/s" if self.running else "Paused")
         self.st_view.setText(f"{f.size} x {f.size}, zoom {self.view.zoom}x")
-        self.st_seed.setText(f"Seed {self.seeding.seed}")
+        if self.view.pattern is not None:
+            self.st_seed.setText("Click: place  Right-click: turn  Esc: done")
+        elif self.loaded:
+            self.st_seed.setText(self.loaded)
+        else:
+            self.st_seed.setText(f"Seed {self.seeding.seed}")
 
     def _toggle_sound(self, on: bool) -> None:
         self.sounds.enabled = on
@@ -348,7 +556,7 @@ class MainWindow(Win95Frame):
         geometry = self.settings.geometry
         if geometry is None or not self.restoreGeometry(geometry):
             screen = QApplication.primaryScreen().availableGeometry()
-            w, h = min(860, int(screen.width() * 0.75)), min(820, int(screen.height() * 0.88))
+            w, h = min(900, int(screen.width() * 0.75)), min(820, int(screen.height() * 0.88))
             self.resize(w, h)
             self.move(screen.center().x() - w // 2, screen.center().y() - h // 2)
         self._first_show = True

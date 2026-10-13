@@ -2,7 +2,7 @@
 
     python tools/build.py
 
-Result: Cellbox.exe in the project folder, a portable single file with Python, Qt, numba and the sounds
+Result: Cellbox.exe in the project folder, a portable single file with Python, Qt, numba, the sounds and the pattern library
 inside. The build runs the exe's --self-check afterwards (which also compiles the engine into the
 user's cache, so the first real launch is quick) and fails if the engine does not work.
 """
@@ -43,7 +43,7 @@ def keep(entry):
     dest = entry[0].replace("\\\\", "/")
     return not any(fnmatch.fnmatch(dest, pat) or dest.startswith(pat + "/") for pat in TRIM)
 
-a = Analysis([{main!r}], pathex=[{root!r}], datas=[({sounds!r}, "assets/sounds")],
+a = Analysis([{main!r}], pathex=[{root!r}], datas=[({sounds!r}, "assets/sounds"), ({patterns!r}, "assets/patterns")],
              excludes=["tkinter", "matplotlib", "scipy", "IPython", "pytest"])
 a.binaries = [b for b in a.binaries if keep(b)]
 a.datas = [d for d in a.datas if keep(d)]
@@ -137,7 +137,8 @@ def main() -> None:
     version_file.write_text(VERSION_INFO.format(nums=nums, ver=__version__), encoding="utf-8")
     spec = WORK / "Cellbox.spec"
     spec.write_text(SPEC.format(trim=TRIM, main=str(ROOT / "main.py"), root=str(ROOT), icon=str(ICON),
-                                sounds=str(ROOT / "assets" / "sounds"), splash=str(SPLASH),
+                                sounds=str(ROOT / "assets" / "sounds"), patterns=str(ROOT / "assets" / "patterns"),
+                                splash=str(SPLASH),
                                 version=str(version_file)),
                     encoding="utf-8")
     subprocess.run([

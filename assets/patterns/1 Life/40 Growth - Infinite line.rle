@@ -1,0 +1,4 @@
+#N Infinite line
+#C One cell high, grows forever: it builds two block-laying switch engines.
+x = 39, y = 1, rule = B3/S23
+8ob5o3b3o6b7ob5o!

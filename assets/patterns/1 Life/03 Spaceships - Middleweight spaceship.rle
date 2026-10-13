@@ -1,0 +1,4 @@
+#N Middleweight spaceship
+#C MWSS, c/2.
+x = 6, y = 5, rule = B3/S23
+3bo2b$bo3bo$o5b$o4bo$5o!

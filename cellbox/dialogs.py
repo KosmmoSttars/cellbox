@@ -6,7 +6,7 @@ from PyQt6.QtWidgets import (QButtonGroup, QCheckBox, QGridLayout, QGroupBox, QH
                              QPushButton, QRadioButton, QSlider, QSpinBox, QVBoxLayout, QWidget)
 
 from cellbox import __version__
-from cellbox.rules import Rule, RuleError, parse, preset_name
+from cellbox.rules import AnyRule, RuleError, parse, preset_name
 from cellbox.settings import SeedOptions, new_seed
 from cellbox.sound import SoundBank
 from cellbox.win95 import Win95Frame, icon_pixmap
@@ -68,22 +68,24 @@ class RuleDialog(Win95Dialog):
     """Type a rule string; the OK button only works for a valid rule."""
 
     HELP = ("B lists the neighbor counts that bring a dead cell to life, S the counts that keep a live "
-            "cell alive. Add /C and a state count for Generations rules: B2/S/C3 is Brian's Brain.")
+            "cell alive. Add /C and a state count for Generations rules: B2/S/C3 is Brian's Brain. "
+            "WireWorld runs electrons along wires. Continuous Lenia: Lenia R=13 T=10 m=0.15 s=0.015 b=1 "
+            "(radius, steps per time unit, growth center and width, ring heights like 1/2;1).")
 
-    def __init__(self, parent: QWidget, rule: Rule, sounds: SoundBank):
+    def __init__(self, parent: QWidget, rule: AnyRule, sounds: SoundBank):
         super().__init__("Custom Rule", parent)
         self._sounds = sounds
         self.rule = rule
 
         self._edit = QLineEdit(str(rule))
-        self._edit.setMinimumWidth(240)
+        self._edit.setMinimumWidth(320)
         self._edit.textChanged.connect(self._validate)
         self._status = QLabel()
         self._status.setWordWrap(True)
         self._status.setMinimumHeight(30)
         help_label = QLabel(self.HELP)
         help_label.setWordWrap(True)
-        help_label.setFixedWidth(320)
+        help_label.setFixedWidth(360)
 
         row, (ok, cancel) = self.button_row("OK", "Cancel")
         ok.clicked.connect(self.accept)
@@ -202,6 +204,11 @@ SHORTCUTS = (
     ("F", "Fit the field to the window"),
     ("Drag", "Pan (the field wraps around)"),
     ("Wheel", "Zoom at the cursor"),
+    ("Ctrl+O  /  Ctrl+S", "Open / save an RLE pattern"),
+    ("Ctrl+C  /  Ctrl+V", "Copy the field / paste a pattern as RLE"),
+    ("Click", "Place another copy of the pattern"),
+    ("Right-click  /  T", "Turn the pattern"),
+    ("Esc", "Stop placing"),
 )
 
 
@@ -212,7 +219,8 @@ class AboutDialog(Win95Dialog):
         icon.setPixmap(icon_pixmap("info"))
         icon.setAlignment(Qt.AlignmentFlag.AlignTop)
         text = QLabel(f"<b>Cellbox</b> {__version__}<br>Cellular automata in a Windows 95 box.<br>"
-                      "Life-like and Generations rules on a wrap-around field.<br><br>© KosmoStars")
+                      "Life-like, Generations, Wireworld and Lenia on a wrap-around field.<br><br>"
+                      "Lenia creatures from Bert Chan's catalogue (MIT license).<br>© KosmoStars")
         keys = QGridLayout()
         keys.setHorizontalSpacing(16)
         keys.setVerticalSpacing(2)

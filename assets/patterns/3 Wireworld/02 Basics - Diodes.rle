@@ -1,0 +1,5 @@
+#N Diodes
+#C The same clock twice. The top diode lets its electrons through; the bottom one is turned around and stops them.
+x = 46, y = 14, rule = WireWorld
+20.3C$CBA18C2.23C$C3.C15.3C$C3.C$5C5$19.3C$CBA17C.25C$C3.C14.3C$C3.C$
+5C!

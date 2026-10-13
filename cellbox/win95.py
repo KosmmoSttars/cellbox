@@ -400,6 +400,18 @@ def glyph(name: str) -> QPixmap:
             p.drawLine(x, y, x, y + 3 * dy)
         p.setBrush(QColor("#000080"))
         p.drawRect(6, 6, 3, 3)
+    elif name == "open":   # a yellow folder
+        p.setPen(BLACK)
+        p.setBrush(QColor("#FFFF00"))
+        p.drawPolygon(QPolygon([QPoint(1, 4), QPoint(5, 4), QPoint(6, 5), QPoint(13, 5), QPoint(13, 13),
+                                QPoint(1, 13)]))
+        p.setBrush(QColor("#808000"))
+        p.drawPolygon(QPolygon([QPoint(1, 13), QPoint(4, 8), QPoint(15, 8), QPoint(13, 13)]))
+    elif name == "patterns":   # a glider
+        p.setPen(BLACK)
+        p.setBrush(QColor("#00FFFF"))
+        for x, y in ((6, 1), (11, 6), (1, 11), (6, 11), (11, 11)):
+            p.drawRect(x, y, 3, 3)
     elif name in ("zoom_in", "zoom_out"):   # a magnifier
         p.setPen(QPen(BLACK, 1))
         p.setBrush(WHITE)

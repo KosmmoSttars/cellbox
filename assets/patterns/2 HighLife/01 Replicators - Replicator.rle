@@ -1,0 +1,4 @@
+#N Replicator
+#C Copies itself: two copies after 12 generations, then four, and the copies keep multiplying. Nathan Thompson, 1994.
+x = 5, y = 5, rule = B36/S23
+2b3o$bo2bo$o3bo$o2bo$3o!

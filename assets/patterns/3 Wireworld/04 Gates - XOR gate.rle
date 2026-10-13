@@ -1,0 +1,5 @@
+#N XOR gate
+#C The same two clocks into an XOR gate: a pulse comes out when exactly one input sends one. Every 36 steps both arrive together and cancel out.
+x = 65, y = 20, rule = WireWorld
+CBA22C$C3.C19.C$C3.C19.C$C3.C19.C$5C19.C$24.C$24.C5.2C$24.6C2.C$31.4C$
+31.C2.31C$31.4C$24.6C2.C$24.C5.2C$24.C$3CBA20C$C5.C$C5.C$C5.C$C5.C$7C!

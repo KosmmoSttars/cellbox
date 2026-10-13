@@ -1,0 +1,4 @@
+#N Clocks
+#C Loops of wire with an electron inside tick at their own period: 6, 8 and 16 steps, one pulse per lap down each wire. An electron cuts every corner, so a loop's period is its length minus four.
+x = 56, y = 24, rule = WireWorld
+CBA53C$C2.C$4C7$CBA53C$C2.C$C2.C$4C6$CBA53C$C4.C$C4.C$C4.C$C4.C$6C!

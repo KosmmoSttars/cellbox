@@ -1,0 +1,4 @@
+#N Queen bee shuttle
+#C Period 30: a queen bee bounces between two blocks.
+x = 22, y = 7, rule = B3/S23
+9bo$7bobo$6bobo$2o3bo2bo11b2o$2o4bobo11b2o$7bobo$9bo!

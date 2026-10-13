@@ -1,0 +1,4 @@
+#N R-pentomino
+#C Five cells that take 1103 generations to settle, throwing out six gliders.
+x = 3, y = 3, rule = B3/S23
+b2o$2ob$bo!
