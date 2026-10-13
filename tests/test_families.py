@@ -77,7 +77,17 @@ def test_random_circuits_are_repeatable_and_keep_wires_thin():
     assert np.array_equal(a, b)
     filled = a != 0
     blocks = filled[:-1, :-1] & filled[1:, :-1] & filled[:-1, 1:] & filled[1:, 1:]
-    assert blocks.sum() < 0.01 * filled.sum()   # wires do not run side by side (joins can make a few)
+    assert blocks.sum() < 0.03 * filled.sum()   # wires do not run side by side (each diode has two blocks)
+
+
+@pytest.mark.parametrize("seed", [0, 1, 2])
+def test_random_circuits_never_fill_up(seed):
+    """Diodes keep electrons that come back from junctions out of the loops: without them every wire
+    ends up humming with an electron every third cell."""
+    field = Field(256, Wireworld())
+    field.seed(1.0, spot=False, seed=seed)
+    field.step(2000)
+    assert 0 < field.population < 0.12 * (field.state != 0).sum()
 
 
 def test_spot_circuit_stays_in_the_middle():

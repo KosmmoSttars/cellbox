@@ -28,7 +28,8 @@ OUT = ROOT / "assets" / "patterns" / "3 Wireworld"
 EMPTY, HEAD, TAIL, WIRE = 0, 1, 2, 3
 
 # Shapes as rows relative to an anchor row, columns from the anchor column; '#' is wire.
-DIODE = {-1: ".###", 0: "##", 1: ".###"}          # wire in from the left up to the anchor, out from +4
+DIODE = {-2: ".##", -1: "####", 0: "#", 1: "####", 2: ".##"}   # wire in from the left up to the anchor,
+                                                                # out from +4
 OR_GATE = {-2: "#", -1: ".#.##", 0: "###", 1: ".#.##", 2: "#"}               # inputs end one left of
 XOR_GATE = {-3: "##", -2: "..#", -1: ".####", 0: ".#..#", 1: ".####", 2: "..#", 3: "##"}   # the anchor
 
@@ -100,16 +101,16 @@ def clocks() -> tuple[Board, bool]:
 
 
 def diodes() -> tuple[Board, bool]:
-    b = Board(16, 50)
-    b.clock(2, 1, 4, 5)
-    b.path((2, 6), (2, 20))
-    b.shape(DIODE, 2, 20)
-    b.path((2, 24), (2, 46))
+    b = Board(18, 50)
+    b.clock(3, 1, 4, 5)
+    b.path((3, 6), (3, 20))
+    b.shape(DIODE, 3, 20)
+    b.path((3, 24), (3, 46))
     b.clock(11, 1, 4, 5)
-    b.path((11, 6), (11, 20))
+    b.path((11, 6), (11, 19))
     b.shape(DIODE, 11, 20, mirrored=True)
     b.path((11, 24), (11, 46))
-    before, through, blocked = heads(b, [(2, 15), (2, 40), (11, 40)])
+    before, through, blocked = heads(b, [(3, 15), (3, 40), (11, 40)])
     ok = len(through) > 0 and set(np.diff(before[2:]).tolist()) == set(np.diff(through[2:]).tolist()) \
         and abs(len(before) - len(through)) <= 2 and not blocked
     print(f"diode: {len(before)} in, {len(through)} through, {len(blocked)} through the turned one")
